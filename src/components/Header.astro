@@ -4,11 +4,10 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Logo from "../assets/images/nordhavn-logo.webp";
 import kurv from "../assets/images/kurv.png";
-
 ---
 
 <!-- Navigation -->
-<div class=" px-10">
+<div class="px-10">
   <div
     x-data="{ showmenu: false }"
     class="px-s py-s fixed top-0 left-0 z-50 w-full bg-beige-50"
@@ -22,7 +21,7 @@ import kurv from "../assets/images/kurv.png";
             src={Logo}
             alt="nordhavncoffee logo"
             class="w-[160px] h-auto object-fit"
-          /> 
+          />
         </a>
       </div>
 
@@ -33,11 +32,7 @@ import kurv from "../assets/images/kurv.png";
       >
         <ul class="flex flex-row gap-s">
           <li>
-            <Link
-              size="medium"
-              variant="textlink"
-              href="/">KAFFER</Link
-            >
+            <Link size="medium" variant="textlink" href="/">KAFFER</Link>
           </li>
 
           <li>
@@ -46,9 +41,7 @@ import kurv from "../assets/images/kurv.png";
             >
           </li>
           <li>
-            <Link size="medium" variant="textlink" href="/"
-              >WHOLESALE</Link
-            >
+            <Link size="medium" variant="textlink" href="/">WHOLESALE</Link>
           </li>
           <li>
             <Link size="medium" variant="textlink" size="medium" href="/"
@@ -65,35 +58,31 @@ import kurv from "../assets/images/kurv.png";
               >ABONNEMENT</Link
             >
           </li>
-<!-- kurv -->
-<li>
-  <a href="/">
-<Image
-src={kurv}
-alt="kurv symbol"
-class="w-[30px] h-auto object-fit"
-/> 
-</a>
-  </li>
-
-
-
-
+          <!-- kurv -->
+          <li>
+            <a href="/">
+              <Image
+                src={kurv}
+                alt="kurv symbol"
+                class="w-[30px] h-auto object-fit"
+              />
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- burgermenu -->
-      <button id="burger-menu" 
-      
-      id="burgermenu"
+      <button
+        id="burger-menu"
+        id="burgermenu"
         class="md:hidden"
         x-on:click="showmenu = ! showmenu"
-    >
+      >
         <svg viewBox="0 0 100 80" width="30" height="30">
-           <rect width="100" height="15" rx="10"></rect>
-           <rect y="30" width="100" height="15" rx="10"></rect>
-           <rect y="60" width="100" height="15" rx="10"></rect>
-         </svg>
-     </button>
+          <rect width="100" height="15" rx="10"></rect>
+          <rect y="30" width="100" height="15" rx="10"></rect>
+          <rect y="60" width="100" height="15" rx="10"></rect>
+        </svg>
+      </button>
     </div>
 
     <!-- mobile view -->
@@ -107,44 +96,34 @@ class="w-[30px] h-auto object-fit"
     >
       <ul class="text-right no-underline pt-xs">
         <li class="pb-xxs">
-            <Link
-              size="medium"
-              variant="textlink"
-              href="/">KAFFER</Link
-            >
-          </li>
+          <Link size="medium" variant="textlink" href="/">KAFFER</Link>
+        </li>
 
-          <li class="pb-xxs">
-            <Link size="medium" variant="textlink" href="/sortiment"
-              >SORTIMENT</Link
-            >
-          </li>
-          <li class="pb-xxs">
-            <Link size="medium" variant="textlink" href="/"
-              >WHOLESALE</Link
-            >
-          </li>
-          <li class="pb-xxs">
-            <Link size="medium" variant="primary" size="medium" href="/"
-              >KAFFEBAR</Link
-            >
-          </li>
-          <li class="pb-xxs">
-            <Link size="medium" variant="primary" size="medium" href="/om"
-              >OM</Link
-            >
-          </li>
-          <li class="pb-xxs">
-            <Link size="medium" variant="button" size="medium" href="/"
-              >ABONNEMENT</Link
-            >
-          </li>
-<!-- kurv -->
-
-
-
+        <li class="pb-xxs">
+          <Link size="medium" variant="textlink" href="/sortiment"
+            >SORTIMENT</Link
+          >
+        </li>
+        <li class="pb-xxs">
+          <Link size="medium" variant="textlink" href="/">WHOLESALE</Link>
+        </li>
+        <li class="pb-xxs">
+          <Link size="medium" variant="primary" size="medium" href="/"
+            >KAFFEBAR</Link
+          >
+        </li>
+        <li class="pb-xxs">
+          <Link size="medium" variant="primary" size="medium" href="/om"
+            >OM</Link
+          >
+        </li>
+        <li class="pb-xxs">
+          <Link size="medium" variant="button" size="medium" href="/"
+            >ABONNEMENT</Link
+          >
+        </li>
+        <!-- kurv -->
       </ul>
     </nav>
   </div>
 </div>
-
