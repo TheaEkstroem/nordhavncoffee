@@ -1,6 +1,86 @@
 ---
+import { Image } from "astro:assets";
+import Link from "../components/Link.astro";
+import Logo from "../assets/images/nordhavn-logo.webp";
+import Facebook from "../assets/images/facebook.png";
+import Instagram from "../assets/images/instagram.png";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+
+<section class="p-sm">
+  <div class="logo">
+    <a href="/">
+      <Image
+        src={Logo}
+        alt="nordhavncoffee logo"
+        class="w-[160px] h-auto object-fit"
+      />
+    </a>
+  </div>
+
+
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-sm py-s md:gap-10xl md:px-lg md:py-2xl">
+    <!--  -->
+    <div class="flex flex-col gap-xs">
+      <div>
+        <h5>Nordhavn Coffee</h5>
+        <p>Info@NordhavnCoffee.Com</p>
+        <p>+45 30 55 90 80</p>
+      </div>
+
+      <div>
+        <h5>CVR/VAT</h5>
+        <p>DK-30493907</p>
+      </div>
+
+      <div>
+      <h5>Sociale Medier</h5>
+      <div class="flex gap-xxs md:gap-xs">
+        <a href="/">
+          <Image
+            src={Facebook}
+            alt="Facebook logo"
+            class="w-[25px] h-auto object-fit"
+          />
+        </a>
+
+        <a href="/">
+            <Image
+              src={Instagram}
+              alt="Facebook logo"
+              class="w-[25px] h-auto object-fit"
+            />
+          </a>
+      </div>
+    </div>
+    </div>
+
+    <!--  -->
+    <div class="flex flex-col gap-xs">
+        <div>
+            <h5>Head office / Roastery</h5>
+            <p>Skudehavnsvej 13, 2100 </p>
+            <p>København, Danmark</p>
+          </div>
+
+          <div>
+            <h5>Nordhavn Coffee Room</h5>
+            <p>Georg Brandes Plads 2, 1307</p>
+            <p>København, Denmark</p>
+          </div>
+    </div>
+
+    <!--  -->
+    <div class="flex flex-col gap-xs">
+    <div class="flex flex-col">
+        <h5>Good to know</h5>
+        <Link size="small" variant="textlink" href="/">Abonnement</Link>
+        <Link size="small" variant="textlink" href="/">Privatlivspolitik</Link>
+        <Link size="small" variant="textlink" href="/">Cookie samtykke </Link>
+        <Link size="small" variant="textlink" href="/">Terms & conditions </Link>
+        <Link size="small" variant="textlink" href="/">Tilbagebetalingspolitik </Link>
+        <Link size="small" variant="textlink" href="/">Smiley rapport</Link>
+    </div>
+    </div>
+  </div>
+  <p class="text-center">© 2024 NORDHAVN COFFEE</p>
+</section>
