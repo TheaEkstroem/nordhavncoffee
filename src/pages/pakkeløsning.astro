@@ -1,0 +1,121 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
+import Kaffe from "../components/Kaffe.astro";
+---
+
+<MainLayout title="Titel">
+  <article>
+    <h1>Index overskrift</h1>
+
+
+
+
+<!-- hvordan virker abonnementet -->
+<div class="bg-beige-400 flex flex-col justify-center px-s md:px-2xl  py-3xl ">
+    <h3>HVORDAN VIRKER ABBONEMENTET?</h3>
+    <h4>Svar på hvordan vores abonnement fungere</h4>
+
+<!-- min-h-screen -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-xl py-sm md:py-3xl md:px-xl">
+    <!-- step 1 -->
+    <div class="relative w-[378px] h-[396px]">
+        <!-- SVG background -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 378 396"
+          class="absolute inset-0 w-full h-full"
+          fill="none"
+        >
+          <path
+            d="M378 396H0V0H221.642C241.509 0 257.614 16.105 257.614 35.9716C257.614 75.7047 289.824 107.915 329.557 107.915H338C360.091 107.915 378 125.823 378 147.915V396Z"
+            fill="#5F718F"
+          ></path>
+        </svg>
+      
+        <!-- Tal "1" -->
+        <div
+          class="absolute top-xxxs right-xs w-xl h-xl flex items-center justify-center bg-yellow-500 font-bold text-white text-6xl font-futura rounded-full"
+        >
+          1
+        </div>
+      
+        <!--  text -->
+        <div class="flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[319px]">
+          <h4 class="font-bold text-beige-50 text-center mb-2">VÆLG DIT ABONNEMENT</h4>
+          <h5 class="text-beige-50 text-center">Vælg selv eller få os til at hjælpe dig</h5>
+        </div>
+      </div>
+
+
+    <!-- step 2 -->
+    <div class="relative w-[378px] h-[396px]">
+        <!-- SVG background -->
+
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="378"
+        height="396"
+        viewBox="0 0 378 396"
+        fill="none"
+        class="absolute inset-0 w-full h-full"
+
+      >
+        <path
+          d="M378 0H0V396H221.642C241.509 396 257.614 379.895 257.614 360.028C257.614 320.295 289.824 288.085 329.557 288.085H338C360.091 288.085 378 270.177 378 248.085V0Z"
+          fill="#5F718F"></path>
+      </svg>
+    
+        <!-- tal  "2" -->
+        <div
+          class="absolute  -bottom-xxxs right-xs w-xl h-xl flex items-center justify-center bg-yellow-500 font-bold text-white text-6xl font-futura rounded-full"
+        >
+          2
+        </div>
+      
+        <!--  text -->
+        <div class="flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[319px]">
+          <h4 class="font-bold text-beige-50 text-center mb-2">VÆLG DIN PRÆFENRENCE OG HYPPIGHED</h4>
+          <h5 class="text-beige-50 text-center">Vælg hvor ofte du vil få leveret din kaffe.</h5>
+        </div>
+      </div>
+
+
+    <!-- step 3 -->
+    <div class="relative w-[378px] h-[396px]">
+        <!-- SVG background -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 378 396"
+          class="absolute inset-0 w-full h-full"
+          fill="none"
+        >
+          <path
+            d="M378 396H0V0H221.642C241.509 0 257.614 16.105 257.614 35.9716C257.614 75.7047 289.824 107.915 329.557 107.915H338C360.091 107.915 378 125.823 378 147.915V396Z"
+            fill="#5F718F"
+          ></path>
+        </svg>
+      
+        <!-- Tal "3" -->
+        <div
+          class="absolute top-xxxs right-xs w-xl h-xl flex items-center justify-center bg-yellow-500 font-bold text-white text-6xl font-futura rounded-full"
+        >
+          3
+        </div>
+      
+        <!-- text -->
+        <div class="flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[319px]">
+          <h4 class="font-bold text-beige-50 text-center mb-2">LÆN DIG TILBAGE DIN KAFFE ER PÅ VEJ</h4>
+          <h5 class="text-beige-50 text-center">Så nemt er det!</h5>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+   
+  </article>
+</MainLayout>

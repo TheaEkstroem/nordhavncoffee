@@ -1,0 +1,288 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Marcala from "../assets/images/kaffe/marcala.webp";
+import Cajamarca from "../assets/images/kaffe/cajamarca.webp";
+import Modernespresso from "../assets/images/kaffe/modernitalianespresso.webp";
+import Darkespresso from "../assets/images/kaffe/darkespresso.webp";
+import Espressoblendno3 from "../assets/images/kaffe/espresso-blend3.webp";
+import Havensfilter from "../assets/images/kaffe/havnensfilter.webp";
+import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
+---
+
+<MainLayout title="Titel">
+  <article>
+    <section class="bg-rosa-500">
+    <div class="grid grid-cols-2">
+        <Image
+        src={Marcala}
+        alt="nordhavncoffee logo"
+        class="w-[300px] h-auto object-fit"
+      />
+      <h1 class="text-purple-500">MARCALA</h1>
+    </div>
+</section>
+
+    <!-- hvordan virker abonnementet -->
+    <div
+      class="bg-beige-500 flex flex-col justify-center px-s md:px-2xl py-3xl"
+    >
+      <h3>HVORDAN VIRKER ABBONEMENTET?</h3>
+      <h4>Svar på hvordan vores abonnement fungere</h4>
+
+      <!-- min-h-screen -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-xl py-sm md:py-3xl md:px-xl"
+      >
+        <!-- step 1 -->
+        <div class="relative w-[378px] h-[396px]">
+          <!-- SVG background -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 378 396"
+            class="absolute inset-0 w-full h-full"
+            fill="none"
+          >
+            <path
+              d="M378 396H0V0H221.642C241.509 0 257.614 16.105 257.614 35.9716C257.614 75.7047 289.824 107.915 329.557 107.915H338C360.091 107.915 378 125.823 378 147.915V396Z"
+              fill="#6C4852"></path>
+          </svg>
+
+          <!-- Tal "1" -->
+          <div
+            class="absolute top-xxxs right-xs w-xl h-xl flex items-center justify-center bg-purple-500 font-bold text-white text-6xl font-futura rounded-full"
+          >
+            1
+          </div>
+
+          <!--  text -->
+          <div
+            class="flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[319px]"
+          >
+            <h4 class="font-bold text-beige-50 text-center mb-2">
+              VÆLG DIT ABONNEMENT
+            </h4>
+            <h5 class="text-beige-50 text-center">
+              Vælg selv eller få os til at hjælpe dig
+            </h5>
+          </div>
+        </div>
+
+        <!-- step 2 -->
+        <div class="relative w-[378px] h-[396px]">
+          <!-- SVG background -->
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="378"
+            height="396"
+            viewBox="0 0 378 396"
+            fill="none"
+            class="absolute inset-0 w-full h-full"
+          >
+            <path
+              d="M378 0H0V396H221.642C241.509 396 257.614 379.895 257.614 360.028C257.614 320.295 289.824 288.085 329.557 288.085H338C360.091 288.085 378 270.177 378 248.085V0Z"
+              fill="#6C4852"></path>
+          </svg>
+
+          <!-- tal  "2" -->
+          <div
+            class="absolute -bottom-xxxs right-xs w-xl h-xl flex items-center justify-center bg-purple-500 font-bold text-white text-6xl font-futura rounded-full"
+          >
+            2
+          </div>
+
+          <!--  text -->
+          <div
+            class="flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[319px]"
+          >
+            <h4 class="font-bold text-beige-50 text-center mb-2">
+              VÆLG DIN PRÆFENRENCE OG HYPPIGHED
+            </h4>
+            <h5 class="text-beige-50 text-center">
+              Vælg hvor ofte du vil få leveret din kaffe.
+            </h5>
+          </div>
+        </div>
+
+        <!-- step 3 -->
+        <div class="relative w-[378px] h-[396px]">
+          <!-- SVG background -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 378 396"
+            class="absolute inset-0 w-full h-full"
+            fill="none"
+          >
+            <path
+              d="M378 396H0V0H221.642C241.509 0 257.614 16.105 257.614 35.9716C257.614 75.7047 289.824 107.915 329.557 107.915H338C360.091 107.915 378 125.823 378 147.915V396Z"
+              fill="#6C4852"></path>
+          </svg>
+
+          <!-- Tal "3" -->
+          <div
+            class="absolute top-xxxs right-xs w-xl h-xl flex items-center justify-center bg-purple-500 font-bold text-white text-6xl font-futura rounded-full"
+          >
+            3
+          </div>
+
+          <!-- text -->
+          <div
+            class="flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[319px]"
+          >
+            <h4 class="font-bold text-beige-50 text-center mb-2">
+              LÆN DIG TILBAGE DIN KAFFE ER PÅ VEJ
+            </h4>
+            <h5 class="text-beige-50 text-center">Så nemt er det!</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- citat -->
+    <div class="flex flex-col justify-center px-s md:px-2xl py-10xl">
+      <h3 class="pb-s font-bold">“En god kop kaffe med ærlig og ren samvittighed.”</h3>
+      <h4 class="pb-s">
+        Vi forpligter os til at arbejde for at fremme bæredygtighed og kvalitet.
+        Kaffen købes kun fra producenter og kun fra kooperativer som aktivt
+        arbejder for lokal bæredygtighed, uddannelse og ligestilling. Kaffen
+        ristes selvfølgelig efter den gode smag, men også med fokus på at
+        effektivisere og minimere energiforbrug
+      </h4>
+      <h4>
+        Velkommen til Nordhavn Coffee - Hvor lidenskab for kaffe og engagement i
+        at skabe mindeværdige øjeblikke forenes
+      </h4>
+    </div>
+
+    <!-- pakkeløsning  -->
+    <div
+      class="bg-beige-500 flex flex-col justify-center px-s md:px-2xl py-3xl"
+    >
+      <h3>HVORDAN VIRKER ABBONEMENTET?</h3>
+      <h4>Svar på hvordan vores abonnement fungere</h4>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-xl py-sm md:py-3xl md:px-xl"
+      >
+        <!-- FARVORITTER -->
+        <div>
+          <div class="bg-purple-500 w-[380px] h-[380px] p-s">
+            <h3 class="font-bold text-center pb-xs">FARVORITTER</h3>
+            <div class="flex justify-center">
+              <div
+                class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
+              >
+                <Image
+                  src={Espressoblendno3}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
+
+              <div class="relative bg-white shadow-lg rounded-md z-20">
+                <Image
+                  src={Cajamarca}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
+
+              <div
+                class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
+              >
+                <Image
+                  src={Havensfilter}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
+            </div>
+          </div>
+          <Link size="large" variant="button" size="medium" href="/">KØB</Link>
+        
+        </div>
+
+        <!-- spicy -->
+        <div>
+          <div class="bg-purple-500 w-[380px] h-[380px] p-s">
+            <h3 class="font-bold text-center pb-xs">SPICY MIX</h3>
+            <div class="flex justify-center">
+              <div
+                class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
+              >
+                <Image
+                  src={Espressoblendno3}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
+
+              <div class="relative bg-white shadow-lg rounded-md z-20">
+                <Image
+                  src={Cajamarca}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
+
+              <div
+                class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
+              >
+                <Image
+                  src={Havensfilter}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
+            </div>
+          </div>
+          <Link size="large" variant="button" size="medium" href="/">KØB</Link>
+        </div>
+      
+
+      <!-- BLAND SELV -->
+      <div>
+        <div class="bg-purple-500 w-[380px] h-[380px] p-s">
+          <h3 class="font-bold text-center pb-xs">BLAND SELV</h3>
+          <div class="flex justify-center">
+            <div
+              class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
+            >
+              <Image
+                src={Espressoblendno3}
+                alt="nordhavncoffee logo"
+                class="w-[130px] h-auto object-fit"
+              />
+            </div>
+
+            <div class="relative bg-white shadow-lg rounded-md z-20">
+              <Image
+                src={Modernespresso}
+                alt="nordhavncoffee logo"
+                class="w-[130px] h-auto object-fit"
+              />
+            </div>
+
+            <div
+              class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
+            >
+              <Image
+                src={Havensfilter}
+                alt="nordhavncoffee logo"
+                class="w-[130px] h-auto object-fit"
+              />
+            </div>
+          </div>
+        </div>
+        <Link size="large" variant="button" size="medium" href="/">KØB</Link>
+      </div>
+
+    </div>
+
+
+    </div>
+  </article>
+</MainLayout>
