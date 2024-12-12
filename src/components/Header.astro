@@ -1,5 +1,136 @@
 ---
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Logo from "../assets/images/nordhavn-logo.webp";
+
 ---
-<div>
-Header - tilføj navigation mm.
+
+<!-- Navigation -->
+<div class=" px-10">
+  <div
+    x-data="{ showmenu: false }"
+    class="px-s py-s fixed top-0 left-0 z-50 w-full bg-beige-50"
+  >
+    <!-- Desktop -->
+    <div id="navbar" class="flex flex-row justify-between">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/">
+          <Image
+            src={Logo}
+            alt="#Plasticchange logo"
+            class="w-[160px] h-auto object-fit"
+          /> 
+        </a>
+      </div>
+
+      <!-- nav -->
+      <nav
+        id="desktopmenu"
+        class="hidden md:flex md:flex-row md:items-center gap-20"
+      >
+        <ul class="flex flex-row gap-s">
+          <li>
+            <Link
+              size="medium"
+              variant="textlink"
+              href="#hvad-er-plastikforurening">KAFFER</Link
+            >
+          </li>
+
+          <li>
+            <Link size="medium" variant="textlink" href="/sortiment"
+              >SORTIMENT</Link
+            >
+          </li>
+          <li>
+            <Link size="medium" variant="textlink" href="/"
+              >WHOLESALE</Link
+            >
+          </li>
+          <li>
+            <Link size="medium" variant="textlink" size="medium" href="/"
+              >KAFFEBAR</Link
+            >
+          </li>
+          <li>
+            <Link size="medium" variant="textlink" size="medium" href="/om"
+              >OM</Link
+            >
+          </li>
+          <li>
+            <Link size="medium" variant="button" size="medium" href="/"
+              >ABONNEMENT</Link
+            >
+          </li>
+<!-- kurv -->
+
+        </ul>
+      </nav>
+      <!-- burgermenu -->
+      <button id="burger-menu" 
+      
+      id="burgermenu"
+        class="md:hidden"
+        x-on:click="showmenu = ! showmenu"
+    >
+        <svg viewBox="0 0 100 80" width="30" height="30">
+           <rect width="100" height="15" rx="10"></rect>
+           <rect y="30" width="100" height="15" rx="10"></rect>
+           <rect y="60" width="100" height="15" rx="10"></rect>
+         </svg>
+     </button>
+    </div>
+
+    <!-- mobile view -->
+    <nav
+      id="mobilmenu"
+      class="flex flex-col pt-4 w-full md:hidden"
+      x-show="showmenu"
+      x-transition
+      x-on:click="showmenu = false"
+      x-on:click.outside="showmenu = false"
+    >
+      <ul class="text-right no-underline pt-xs">
+        <li class="pb-xxs">
+            <Link
+              size="medium"
+              variant="textlink"
+              href="#hvad-er-plastikforurening">KAFFER</Link
+            >
+          </li>
+
+          <li class="pb-xxs">
+            <Link size="medium" variant="textlink" href="/sortiment"
+              >SORTIMENT</Link
+            >
+          </li>
+          <li class="pb-xxs">
+            <Link size="medium" variant="textlink" href="/"
+              >WHOLESALE</Link
+            >
+          </li>
+          <li class="pb-xxs">
+            <Link size="medium" variant="primary" size="medium" href="/"
+              >KAFFEBAR</Link
+            >
+          </li>
+          <li class="pb-xxs">
+            <Link size="medium" variant="primary" size="medium" href="/om"
+              >OM</Link
+            >
+          </li>
+          <li class="pb-xxs">
+            <Link size="medium" variant="button" size="medium" href="/"
+              >ABONNEMENT</Link
+            >
+          </li>
+<!-- kurv -->
+
+
+      </ul>
+    </nav>
+  </div>
 </div>
+
