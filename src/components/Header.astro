@@ -3,6 +3,7 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Logo from "../assets/images/nordhavn-logo.webp";
+import kurv from "../assets/images/kurv.png";
 
 ---
 
@@ -19,7 +20,7 @@ import Logo from "../assets/images/nordhavn-logo.webp";
         <a href="/">
           <Image
             src={Logo}
-            alt="#Plasticchange logo"
+            alt="nordhavncoffee logo"
             class="w-[160px] h-auto object-fit"
           /> 
         </a>
@@ -35,7 +36,7 @@ import Logo from "../assets/images/nordhavn-logo.webp";
             <Link
               size="medium"
               variant="textlink"
-              href="#hvad-er-plastikforurening">KAFFER</Link
+              href="/">KAFFER</Link
             >
           </li>
 
@@ -65,6 +66,18 @@ import Logo from "../assets/images/nordhavn-logo.webp";
             >
           </li>
 <!-- kurv -->
+<li>
+  <a href="/">
+<Image
+src={kurv}
+alt="kurv symbol"
+class="w-[30px] h-auto object-fit"
+/> 
+</a>
+  </li>
+
+
+
 
         </ul>
       </nav>
@@ -97,7 +110,7 @@ import Logo from "../assets/images/nordhavn-logo.webp";
             <Link
               size="medium"
               variant="textlink"
-              href="#hvad-er-plastikforurening">KAFFER</Link
+              href="/">KAFFER</Link
             >
           </li>
 
@@ -127,6 +140,7 @@ import Logo from "../assets/images/nordhavn-logo.webp";
             >
           </li>
 <!-- kurv -->
+
 
 
       </ul>
