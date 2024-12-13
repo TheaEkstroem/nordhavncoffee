@@ -10,41 +10,118 @@ import Darkespresso from "../assets/images/kaffe/darkespresso.webp";
 import Espressoblendno3 from "../assets/images/kaffe/espresso-blend3.webp";
 import Havensfilter from "../assets/images/kaffe/havnensfilter.webp";
 import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
-import Smallprodukt from "../components/smallproduct.astro";
-
+import Smallproduct from "../components/smallproduct.astro";
 ---
 
 <MainLayout title="Titel">
   <article>
-    <section class="bg-brand-rosa " >
-    <div class="grid grid-cols-2">
-        <Image
-        src={Marcala}
-        alt="nordhavncoffee logo"
-        class="w-[300px] h-auto object-fit"
-      />
-      <div>
-      <h1 class="text-brand-purple ">MARCALA</h1>
-      <hr>
-      <h4 class="text-font-white">Fra 170,00 kr.  /måned</h4>
-      <p class="text-font-white">Espressoen er, som navnet antyder, en mørkristet espresso udgave af kaffen fra Marcala regionen i Honduras, bestående af Bourbon, Catuai, Caturra og Typica varianterne. Kaffen har en høj naturlig sødme og rundhed, med meget lav syrlighed, som forsvinder helt i mælkebaserede kaffer. Prøv den rent eller som hovedingrediens i Modern Italian Espresso.
-
-        Kaffen stammer fra Marcala-regionen i Honduras og leveres af COMSA-kooperativet. COMSA er et andelsselskab i Honduras og består af omkring 200 familiedrevne gårde der leverer deres høst til en fælles vådmølle hvor kaffefrugterne bearbejdes.
-        </p>
-
-<h4 class="text-font-white">Byg dit abonnement</h4>
-
+    <!-- om produktsektion -->
+    <section class="bg-brand-rosa">
+      <div class="px-s md:px-2xl grid md:grid-cols-2">
+        <div></div>
+        <div>
+          <h1 class="text-brand-purple">MARCALA</h1>
+          <hr class="text-background-white" />
+          <h4 class="text-font-white">Fra 170,00 kr. /måned</h4>
+        </div>
       </div>
-    </div>
-</section>
+<!-- billede -->
+      <div
+        class="px-s md:px-2xl py-xs md:py-xl grid md:grid-cols-2 justify-items-center"
+      >
+        <Image
+          src={Marcala}
+          alt="Marcala"
+          class="w-[150px] md:w-[300px] h-auto object-fit md:-mt-sm pb-s"
+        />
+        <div>
+          <p class="text-font-white">
+            Espressoen er, som navnet antyder, en mørkristet espresso udgave af
+            kaffen fra Marcala regionen i Honduras, bestående af Bourbon,
+            Catuai, Caturra og Typica varianterne. Kaffen har en høj naturlig
+            sødme og rundhed, med meget lav syrlighed, som forsvinder helt i
+            mælkebaserede kaffer. Prøv den rent eller som hovedingrediens i
+            Modern Italian Espresso. Kaffen stammer fra Marcala-regionen i
+            Honduras og leveres af COMSA-kooperativet. COMSA er et andelsselskab
+            i Honduras og består af omkring 200 familiedrevne gårde der leverer
+            deres høst til en fælles vådmølle hvor kaffefrugterne bearbejdes.
+          </p>
 
-<Smallprodukt 
-  bgcolor="bg-brand-blue" 
-  text="Velkommen til vårt produkt!" 
-  country="Costa Rica, Mexico & Colombia" 
-/>
+          <h4 class="text-font-white py-xs">Byg dit abonnement</h4>
 
+          <!-- cards med de andre produkter man kan vælge i sit abonnement -->
+          <div class="flex gap-xs md:gap-ml">
+            <Smallproduct
+              bgcolor="bg-background-rosa"
+              imagealt="Billede af cajamarca kaffepose"
+              image="cajamarca.webp"
+            />
 
+            <Smallproduct
+              bgcolor="bg-background-rosa"
+              imagealt="Billede af espresso-blend kaffepose"
+              image="espresso-blend3.webp"
+            />
+            <Smallproduct
+              bgcolor="bg-background-rosa"
+              imagealt="Billede af havnensfilter kaffepose"
+              image="havnensfilter.webp"
+            />
+            <Smallproduct
+              bgcolor="bg-background-rosa"
+              imagealt="Billede af modern italian espresso kaffepose"
+              image="modernitalianespresso.webp"
+            />
+          </div>
+
+          <!-- form, til at vælge hvordan ens abonnement skal være -->
+          <div class="space-y-xs">
+            <!-- Grindstyle -->
+            <div class="flex items-center justify-between">
+              <label class="text-font-white text-lg font-futura block"
+                >Grindstyle</label
+              >
+              <select
+                class="mt-1 block bg-brand-purple text-brand-rosa border border-brand-purple px-4 py-2 w-4/5"
+              >
+                <option>Vælg mulighed</option>
+                <option>Espresso</option>
+                <option>Filter</option>
+                <option>Moka Pot</option>
+                <option>Stempel</option>
+                <option>Whole Beans</option>
+              </select>
+            </div>
+
+            <!-- Størrelse -->
+            <div class="flex items-center justify-between">
+              <label class="text-font-white text-lg font-futura block"
+                >Størrelse</label
+              >
+              <select
+                class="mt-1 block bg-brand-purple text-brand-rosa border border-brand-purple px-4 py-2 w-4/5"
+              >
+                <option>500 g</option>
+                <option>1000 g</option>
+              </select>
+            </div>
+
+            <!-- Hyppighed -->
+            <div class="flex items-center justify-between">
+              <label class="text-font-white text-lg font-futura block"
+                >Hyppighed</label
+              >
+              <select
+                class="mt-1 block bg-brand-purple text-brand-rosa border border-brand-purple px-4 py-2 w-4/5"
+              >
+                <option>Hver 14 dag</option>
+                <option>Hver måned</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- hvordan virker abonnementet -->
     <div
@@ -164,7 +241,9 @@ import Smallprodukt from "../components/smallproduct.astro";
 
     <!-- citat -->
     <div class="flex flex-col justify-center px-s md:px-2xl py-10xl">
-      <h3 class="pb-s font-bold">“En god kop kaffe med ærlig og ren samvittighed.”</h3>
+      <h3 class="pb-s font-bold">
+        “En god kop kaffe med ærlig og ren samvittighed.”
+      </h3>
       <h4 class="pb-s">
         Vi forpligter os til at arbejde for at fremme bæredygtighed og kvalitet.
         Kaffen købes kun fra producenter og kun fra kooperativer som aktivt
@@ -223,7 +302,6 @@ import Smallprodukt from "../components/smallproduct.astro";
             </div>
           </div>
           <Link size="large" variant="button" size="medium" href="/">KØB</Link>
-        
         </div>
 
         <!-- spicy -->
@@ -262,48 +340,66 @@ import Smallprodukt from "../components/smallproduct.astro";
           </div>
           <Link size="large" variant="button" size="medium" href="/">KØB</Link>
         </div>
-      
 
-      <!-- BLAND SELV -->
-      <div>
-        <div class="bg-purple-500 w-[380px] h-[380px] p-s">
-          <h3 class="font-bold text-center pb-xs">BLAND SELV</h3>
-          <div class="flex justify-center">
-            <div
-              class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
-            >
-              <Image
-                src={Espressoblendno3}
-                alt="nordhavncoffee logo"
-                class="w-[130px] h-auto object-fit"
-              />
-            </div>
+        <!-- BLAND SELV -->
+        <div>
+          <div class="bg-purple-500 w-[380px] h-[380px] p-s">
+            <h3 class="font-bold text-center pb-xs">BLAND SELV</h3>
+            <div class="flex justify-center">
+              <div
+                class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
+              >
+                <Image
+                  src={Espressoblendno3}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
 
-            <div class="relative bg-white shadow-lg rounded-md z-20">
-              <Image
-                src={Modernespresso}
-                alt="nordhavncoffee logo"
-                class="w-[130px] h-auto object-fit"
-              />
-            </div>
+              <div class="relative bg-white shadow-lg rounded-md z-20">
+                <Image
+                  src={Modernespresso}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
 
-            <div
-              class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
-            >
-              <Image
-                src={Havensfilter}
-                alt="nordhavncoffee logo"
-                class="w-[130px] h-auto object-fit"
-              />
+              <div
+                class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
+              >
+                <Image
+                  src={Havensfilter}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
             </div>
           </div>
+          <Link size="large" variant="button" size="medium" href="/">KØB</Link>
         </div>
-        <Link size="large" variant="button" size="medium" href="/">KØB</Link>
       </div>
-
     </div>
 
+<!-- MÅSKE DU VIL KUNNE LIDE -->
+<div>
+  <div class="bg-purple-500 w-[380px] h-[380px] p-s">
+    <div class="flex justify-center">
+      
 
+      <div class="relative bg-white shadow-lg rounded-md z-20 pb-xs">
+        <Image
+          src={Cajamarca}
+          alt="nordhavncoffee logo"
+          class="w-[130px] h-auto object-fit"
+        />
+      </div>
+      
     </div>
+    <h3 class="font-bold text-center ">FARVORITTER</h3>
+
+  </div>
+</div>
+
+
   </article>
 </MainLayout>
