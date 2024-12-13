@@ -1,5 +1,5 @@
 ---
-const { navn = "" } = Astro.props;
+const { navn = "", udAf = "" } = Astro.props;
 ---
 
 <div>
@@ -13,7 +13,7 @@ const { navn = "" } = Astro.props;
 
 <!-- Card section lilla-->
 <section
-  class="sticky top-[0px] w-100 bg-cover bg-center max-w-full bg-purple-500 pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto] py-8xl"
+  class="sticky top-[0px] w-100 bg-cover bg-center max-w-full bg-purple-500 pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto] py-10xl"
 >
   <div
     class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
@@ -60,7 +60,7 @@ const { navn = "" } = Astro.props;
         class="flex itemst-center justify-between p-xxs px-xs rotate-180 rounded-full bg-rosa-500 text-purple-500 hover:bg-purple-500 hover:border-rosa-500 transition"
         >→
       </button>
-      <h2 class="text-rosa-500">1/4</h2>
+      <h2 class="text-rosa-500">{udAf}</h2>
       <button
         class="p-xs flex items-center justify-center rounded-full bg-rosa-500 text-purple-500 hover:bg-purple-500 hover:border-rosa-500 transition"
         >→
@@ -69,63 +69,7 @@ const { navn = "" } = Astro.props;
     <!-- Indikatior med pile slut-->
   </div>
 </section>
-<section
-  class="sticky top-[0px] w-100 bg-cover bg-center max-w-full bg-yellow-500 pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto] py-8xl"
->
-  <div
-    class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
-  >
-    <div class="col-start-2 md:row-start-2 sm:row-start-1">
-      <h3 class="text-rosa-500">SINGLE</h3>
-      <h1 class="text-8xl text-rosa-500">{navn}</h1>
-    </div>
 
-    <!--billede-->
-    <div
-      class="flex justify-center py-m md:col-start-3 md:col-end-4 md:row-span-full md:row-end-4"
-    >
-      <img src="src/assets/images/kaffe/marcala.webp" alt="kaffe" />
-    </div>
-    <!-- slut -->
-
-    <!--tekst-->
-    <h3 class="text-rosa-500 md:text-2xl col-start-2 h-fit">80 - 275 DKK</h3>
-
-    <h2 class="text-rosa-500 col-start-2 self-end text-2xl">
-      BYG DIT EGET ABONNEMENT
-    </h2>
-    <!-- slut -->
-
-    <!-- SINGLE BUTTON ------>
-    <div
-      class="flex items-center sm:justify-end md:justify-start md:col-start-2 md:row-start-5"
-    >
-      <button
-        class="px-xl py-xs border-2 border-rosa-500 text-rosa-500 font-bold text-lg hover:bg-rosa-500 hover:text-purple-500 hover:border-purple-500 transition"
-      >
-        SINGLE
-        <span class="ml-2">→</span>
-      </button>
-    </div>
-    <!-- SINGLE BUTTON slut ------>
-
-    <!-- Indikatior med pile -->
-    <div
-      class="flex space-x-xs items-center sm:justify-end md:justify-start py-sm col-start-5 md:rotate-90 sm:row-start-6"
-    >
-      <button
-        class="flex itemst-center justify-between p-xxs px-xs rotate-180 rounded-full bg-rosa-500 text-purple-500 hover:bg-purple-500 hover:border-rosa-500 transition"
-        >→
-      </button>
-      <h2 class="text-rosa-500">1/4</h2>
-      <button
-        class="p-xs flex items-center justify-center rounded-full bg-rosa-500 text-purple-500 hover:bg-purple-500 hover:border-rosa-500 transition"
-        >→
-      </button>
-    </div>
-    <!-- Indikatior med pile slut-->
-  </div>
-</section>
 <script>
   /* Import af Motion One biblioteket */
   import { animate, scroll } from "motion";
