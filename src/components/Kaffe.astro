@@ -30,13 +30,36 @@ const {
     </div>
 
     <!--billede-->
-    <div
-      class="flex justify-center py-m md:col-start-3 md:col-end-4 md:row-span-full md:row-end-4 hover:origin-center hover:rotate-12"
+    <article
+      class="mangeelementerinview relative grid justify-center py-m md:col-start-3 md:col-end-4 md:row-span-full md:row-end-4 hover:origin-center"
     >
-      <img src="src/assets/images/kaffe/marcala.webp" alt="kaffe" />
+      <!-- Marcala billede -->
+      <div class="absolute inset-0 flex justify-center items-center">
+        <img
+          src="src/assets/images/kaffe/marcala.webp"
+          alt="kaffe"
+          class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer1 z-50"
+        />
+      </div>
+      <!-- Kaffebønner billede -->
+      <div class="absolute inset-0 flex justify-center items-center">
+        <img
+          src="public/kaffebønner.webp"
+          alt="bønner"
+          class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer2 z-20"
+        />
+      </div>
 
-      <img src="" alt="" />
-    </div>
+      <!-- Kaffebønner billede -->
+      <div class="absolute inset-0 flex justify-center items-center">
+        <img
+          src="public/kaffebønner.webp"
+          alt="bønner"
+          class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer3 z-20"
+        />
+      </div>
+    </article>
+
     <!-- slut -->
 
     <!--tekst-->
@@ -78,13 +101,49 @@ const {
   </div>
 </section>
 
-<style></style>
-
 <script>
   /* Import af Motion One biblioteket */
-  import { animate, scroll } from "motion";
+  import { animate, inView } from "motion";
 
-  scroll(animate(".stickyparallax1", { y: [10, 0] }), {
-    target: document.querySelector(".stickyparallax1"),
+  inView(".mangeelementerinview", ({ target }) => {
+    console.log("Element is in view!");
+
+    // Start animation
+    animate(
+      ".mangeelementer1",
+      { x: [0, 0], y: [0, 0], rotate: [0, 15] }, // Tilføj rotation
+      { duration: 0.8 }
+    );
+    animate(
+      ".mangeelementer2",
+      { x: [0, 200], y: [100, 0] },
+      { duration: 0.8 }
+    );
+
+    animate(
+      ".mangeelementer3",
+      { x: [0, -150], y: [100, 0] },
+      { duration: 0.8 }
+    );
+
+    // Out-of-view animation
+    return () => {
+      console.log("Element is out of view!");
+      animate(
+        ".mangeelementer1",
+        { x: [0, 0], y: [0, 0], rotate: [-10, 0] }, // Roter tilbage
+        { duration: 0.4 }
+      );
+      animate(
+        ".mangeelementer2",
+        { x: [0, 200], y: [0, 0] },
+        { duration: 0.4 }
+      );
+      animate(
+        ".mangeelementer3",
+        { x: [0, -150], y: [0, 0] },
+        { duration: 0.4 }
+      );
+    };
   });
 </script>
