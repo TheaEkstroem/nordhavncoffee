@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 @layer base{
-
+    :root {
+    --color-primary: 255 115 179;
+    }
 }
-
 /* 
 @font-face {
     font-family: "futura-pt", sans-serif;
@@ -14,7 +15,6 @@ font-style: normal;
     src: url('/think.regular.woff2') format('woff2');
 } 
  */
-
 
 h1{
     font-family: "futura-pt", sans-serif;

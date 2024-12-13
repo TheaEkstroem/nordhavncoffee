@@ -1,0 +1,15 @@
+---
+interface Props {
+  bgcolor: string;
+  text: string;
+  country: string;
+}
+
+const { bgcolor, text, country } = Astro.props;
+---
+
+<div class={`p-4 rounded-lg ${bgcolor}`}>
+  {text && <p class="text-lg font-semibold">{text}</p>}
+  <p class="text-base text-gray-100">{country}</p>
+</div>
+

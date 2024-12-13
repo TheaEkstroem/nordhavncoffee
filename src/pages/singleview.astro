@@ -10,6 +10,8 @@ import Darkespresso from "../assets/images/kaffe/darkespresso.webp";
 import Espressoblendno3 from "../assets/images/kaffe/espresso-blend3.webp";
 import Havensfilter from "../assets/images/kaffe/havnensfilter.webp";
 import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
+import Smallprodukt from "../components/smallproduct.astro";
+
 ---
 
 <MainLayout title="Titel">
@@ -24,21 +26,29 @@ import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
       <div>
       <h1 class="text-brand-purple ">MARCALA</h1>
       <hr>
-      <h4 class="text">Fra 170,00 kr.  /måned</h4>
-      <p>Espressoen er, som navnet antyder, en mørkristet espresso udgave af kaffen fra Marcala regionen i Honduras, bestående af Bourbon, Catuai, Caturra og Typica varianterne. Kaffen har en høj naturlig sødme og rundhed, med meget lav syrlighed, som forsvinder helt i mælkebaserede kaffer. Prøv den rent eller som hovedingrediens i Modern Italian Espresso.
+      <h4 class="text-font-white">Fra 170,00 kr.  /måned</h4>
+      <p class="text-font-white">Espressoen er, som navnet antyder, en mørkristet espresso udgave af kaffen fra Marcala regionen i Honduras, bestående af Bourbon, Catuai, Caturra og Typica varianterne. Kaffen har en høj naturlig sødme og rundhed, med meget lav syrlighed, som forsvinder helt i mælkebaserede kaffer. Prøv den rent eller som hovedingrediens i Modern Italian Espresso.
 
         Kaffen stammer fra Marcala-regionen i Honduras og leveres af COMSA-kooperativet. COMSA er et andelsselskab i Honduras og består af omkring 200 familiedrevne gårde der leverer deres høst til en fælles vådmølle hvor kaffefrugterne bearbejdes.
         </p>
 
-<h4>Byg dit abonnement</h4>
+<h4 class="text-font-white">Byg dit abonnement</h4>
 
       </div>
     </div>
 </section>
 
+<Smallprodukt 
+  bgcolor="bg-brand-blue" 
+  text="Velkommen til vårt produkt!" 
+  country="Costa Rica, Mexico & Colombia" 
+/>
+
+
+
     <!-- hvordan virker abonnementet -->
     <div
-      class="bg-back-500 flex flex-col justify-center px-s md:px-2xl py-3xl"
+      class="bg-background-beige flex flex-col justify-center px-s md:px-2xl py-3xl"
     >
       <h3>HVORDAN VIRKER ABBONEMENTET?</h3>
       <h4>Svar på hvordan vores abonnement fungere</h4>
@@ -63,7 +73,7 @@ import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
 
           <!-- Tal "1" -->
           <div
-            class="absolute top-xxxs right-xs w-xl h-xl flex items-center justify-center bg-purple-500 font-bold text-white text-6xl font-futura rounded-full"
+            class="absolute top-xxxs right-xs w-xl h-xl flex items-center justify-center bg-brand-purple font-bold text-white text-6xl font-futura rounded-full"
           >
             1
           </div>
@@ -72,10 +82,10 @@ import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
           <div
             class="flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[319px]"
           >
-            <h4 class="font-bold text-beige-50 text-center mb-2">
+            <h4 class="font-bold text-font-white text-center mb-2">
               VÆLG DIT ABONNEMENT
             </h4>
-            <h5 class="text-beige-50 text-center">
+            <h5 class="text-font-white text-center">
               Vælg selv eller få os til at hjælpe dig
             </h5>
           </div>
@@ -100,7 +110,7 @@ import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
 
           <!-- tal  "2" -->
           <div
-            class="absolute -bottom-xxxs right-xs w-xl h-xl flex items-center justify-center bg-purple-500 font-bold text-white text-6xl font-futura rounded-full"
+            class="absolute -bottom-xxxs right-xs w-xl h-xl flex items-center justify-center bg-brand-purple font-bold text-white text-6xl font-futura rounded-full"
           >
             2
           </div>
@@ -109,10 +119,10 @@ import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
           <div
             class="flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[319px]"
           >
-            <h4 class="font-bold text-beige-50 text-center mb-2">
+            <h4 class="font-bold text-font-white text-center mb-2">
               VÆLG DIN PRÆFENRENCE OG HYPPIGHED
             </h4>
-            <h5 class="text-beige-50 text-center">
+            <h5 class="text-font-white text-center">
               Vælg hvor ofte du vil få leveret din kaffe.
             </h5>
           </div>
@@ -134,7 +144,7 @@ import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
 
           <!-- Tal "3" -->
           <div
-            class="absolute top-xxxs right-xs w-xl h-xl flex items-center justify-center bg-purple-500 font-bold text-white text-6xl font-futura rounded-full"
+            class="absolute top-xxxs right-xs w-xl h-xl flex items-center justify-center bg-brand-purple font-bold text-white text-6xl font-futura rounded-full"
           >
             3
           </div>
@@ -143,10 +153,10 @@ import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
           <div
             class="flex flex-col items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[319px]"
           >
-            <h4 class="font-bold text-beige-50 text-center mb-2">
+            <h4 class="font-bold text-font-white text-center mb-2">
               LÆN DIG TILBAGE DIN KAFFE ER PÅ VEJ
             </h4>
-            <h5 class="text-beige-50 text-center">Så nemt er det!</h5>
+            <h5 class="text-font-white text-center">Så nemt er det!</h5>
           </div>
         </div>
       </div>
