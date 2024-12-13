@@ -164,6 +164,8 @@ export default {
         background: {
           white: "#FCFCFC",
           beige: "#F7F5F1",
+          rosa: "#7C545F",
+          blue: "#7586A4",
         },
         font: {
           white: "#FCFCFC",
