@@ -1,5 +1,11 @@
 ---
-const { navn = "", udAf = "" } = Astro.props;
+const {
+  navn = "",
+  udAf = "",
+  bgcolor = "",
+  btncolor = "",
+  txcolor = "",
+} = Astro.props;
 ---
 
 <div>
@@ -13,21 +19,23 @@ const { navn = "", udAf = "" } = Astro.props;
 
 <!-- Card section lilla-->
 <section
-  class="sticky top-[0px] w-100 bg-cover bg-center max-w-full bg-purple-500 pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto] md: py-10xl"
+  class={`sticky top-[0px] w-100 bg-cover bg-center max-w-full ${bgcolor} pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto] md: py-10xl`}
 >
   <div
     class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
   >
     <div class="col-start-2 md:row-start-2 sm:row-start-1">
       <h3 class="text-rosa-500">SINGLE</h3>
-      <h1 class="text-8xl text-rosa-500">{navn}</h1>
+      <h1 class={`text-8xl ${txcolor}`}>{navn}</h1>
     </div>
 
     <!--billede-->
     <div
-      class="flex justify-center py-m md:col-start-3 md:col-end-4 md:row-span-full md:row-end-4"
+      class="flex justify-center py-m md:col-start-3 md:col-end-4 md:row-span-full md:row-end-4 hover:origin-center hover:rotate-12"
     >
-      <img src="Marcala.webp" alt="kaffe" />
+      <img src="src/assets/images/kaffe/marcala.webp" alt="kaffe" />
+
+      <img src="" alt="" />
     </div>
     <!-- slut -->
 
@@ -57,7 +65,7 @@ const { navn = "", udAf = "" } = Astro.props;
       class="flex space-x-xs items-center sm:justify-end md:justify-start py-sm col-start-5 md:rotate-90 sm:row-start-6"
     >
       <button
-        class="rotate-180 w-xl h-xl flex items-center justify-center rounded-full bg-rosa-500 text-purple-500 hover:bg-purple-500 hover:text-rosa-500 transition"
+        class={`rotate-180 w-xl h-xl flex items-center justify-center rounded-full ${btncolor} text-purple-500 hover:bg-purple-500 hover:text-rosa-500 transition`}
         >→
       </button>
       <h2 class="text-rosa-500 md: transform-90">{udAf}</h2>
@@ -69,6 +77,8 @@ const { navn = "", udAf = "" } = Astro.props;
     <!-- Indikatior med pile slut-->
   </div>
 </section>
+
+<style></style>
 
 <script>
   /* Import af Motion One biblioteket */
