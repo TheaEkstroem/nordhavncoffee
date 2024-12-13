@@ -13,7 +13,7 @@ const { navn = "", udAf = "" } = Astro.props;
 
 <!-- Card section lilla-->
 <section
-  class="sticky top-[0px] w-100 bg-cover bg-center max-w-full bg-purple-500 pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto] py-10xl"
+  class="sticky top-[0px] w-100 bg-cover bg-center max-w-full bg-purple-500 pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto] md: py-10xl"
 >
   <div
     class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
@@ -57,12 +57,12 @@ const { navn = "", udAf = "" } = Astro.props;
       class="flex space-x-xs items-center sm:justify-end md:justify-start py-sm col-start-5 md:rotate-90 sm:row-start-6"
     >
       <button
-        class="flex itemst-center justify-between p-xxs px-xs rotate-180 rounded-full bg-rosa-500 text-purple-500 hover:bg-purple-500 hover:border-rosa-500 transition"
+        class="rotate-180 w-xl h-xl flex items-center justify-center rounded-full bg-rosa-500 text-purple-500 hover:bg-purple-500 hover:text-rosa-500 transition"
         >→
       </button>
-      <h2 class="text-rosa-500">{udAf}</h2>
+      <h2 class="text-rosa-500 md: transform-90">{udAf}</h2>
       <button
-        class="p-xs flex items-center justify-center rounded-full bg-rosa-500 text-purple-500 hover:bg-purple-500 hover:border-rosa-500 transition"
+        class="w-xl h-xl flex items-center justify-center rounded-full bg-rosa-500 text-purple-500 hover:bg-purple-500 hover:text-rosa-500 transition"
         >→
       </button>
     </div>
