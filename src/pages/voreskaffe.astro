@@ -1,0 +1,204 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Marcala from "../assets/images/kaffe/marcala.webp";
+import Cajamarca from "../assets/images/kaffe/cajamarca.webp";
+import Modernespresso from "../assets/images/kaffe/modernitalianespresso.webp";
+import Darkespresso from "../assets/images/kaffe/darkespresso.webp";
+import Espressoblendno3 from "../assets/images/kaffe/espresso-blend3.webp";
+import Havensfilter from "../assets/images/kaffe/havnensfilter.webp";
+import Velvetespresso from "../assets/images/kaffe/velvet-esp.webp";
+import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
+---
+
+<MainLayout title="Kaffe">
+  <article>
+    <section class="bg-brand-rosa py-ml">
+      <div class="px-s md:px-2xl">
+        <h1 class="text-font-white">KAFFE</h1>
+        <h2 class="text-font-white py-s">Læs om vores varianter</h2>
+
+        <hr class="text-background-white" />
+        <!-- grid sektion med kaffe -->
+        <div class="grid md:grid-cols-2 gap-lg mt-lg justify-items-center pb-xl">
+          <!-- Marcala -->
+          <div
+            class="border border-background-white p-xs gap-ml grid grid-cols-3 justify-items-center"
+          >
+            <Image
+              class="w-[100px] md:w-[130px] h-auto object-fit pb-s mt-xs col-span-1"
+              src={Marcala}
+              alt="Marcala"
+            />
+
+            <div class="text-font-white col-span-2">
+              <h3>MARCALA</h3>
+              <p>
+                Kaffen har en naturlig høj sødme og rundhed. Har til formål at
+                tilfredsstille dine daglige kaffebehov
+              </p>
+              <br />
+              <p>Noter af:</p>
+
+              <ul class="list-disc list-inside">
+                <li>Chokolade</li>
+                <li>Nød</li>
+                <li>Diskret syrlighed</li>
+              </ul>
+              <br />
+
+              <p>Perfekt som hverdagskaffe.</p>
+            </div>
+          </div>
+
+          <!-- MODERN ITALIAN  -->
+          <div
+            class="border border-background-white p-xs gap-ml grid grid-cols-3 justify-items-center"
+          >
+            <Image
+              class="w-[100px] md:w-[130px] h-auto object-fit pb-s mt-xs col-span-1"
+              src={Modernespresso}
+              alt="Modernespresso"
+            />
+
+            <div class="text-font-white col-span-2">
+              <h3>MODERN ITALIAN</h3>
+              <p>
+                Kaffen er en perfekt kombination af den italienske
+                kaffetradition for mørk rist og den nordiske bølge af lyse
+                riste.
+              </p>
+              <br />
+              <p>Noter af:</p>
+
+              <ul class="list-disc list-inside">
+                <li>Citrus</li>
+                <li>Karamel</li>
+                <li>Mandler</li>
+                <li>Glat mørk chokolade finish, smag af marcipan</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CAJAMARCA  -->
+          <div
+            class="border border-background-white p-xs gap-ml grid grid-cols-3 justify-items-center"
+          >
+            <Image
+              class="w-[100px] md:w-[130px] h-auto object-fit pb-s mt-xs col-span-1"
+              src={Cajamarca}
+              alt="Cajamarca"
+            />
+
+            <div class="text-font-white col-span-2">
+              <h3>CAJAMARCA</h3>
+              <p>
+                Kaffe er et let og sødt alternativ til dens brasilianske og
+                colombianske naboer.
+              </p>
+              <p>Mellemristet kaffe en lys smag af chokolade.</p>
+              <br />
+              <p>Noter af:</p>
+              <ul class="list-disc list-inside">
+                <li>Mandel</li>
+                <li>
+                  Krydret tropisk syrlighed som minder om abrikos og appelsin.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- HAVENS BLEND  -->
+          <div
+            class="border border-background-white p-xs gap-ml grid grid-cols-3 justify-items-center"
+          >
+            <Image
+              class="w-[100px] md:w-[130px] h-auto object-fit pb-s mt-xs col-span-1"
+              src={Havensfilter}
+              alt="HAVENS BLEND"
+            />
+
+            <div class="text-font-white col-span-2">
+              <h3>HAVENS BLEND</h3>
+              <p>Kaffen danner rammen om smagsoplevelsen med en solid base.</p>
+              <br />
+              <p>Noter af:</p>
+              <ul class="list-disc list-inside">
+                <li>Mørk chokolade</li>
+                <li>Nødder</li>
+                <li>Sukkerrør</li>
+              </ul>
+              <br />
+
+              <p>
+                En god kop kaffe og kan nemt følge med resten af dagen, både med
+                og uden mælk.
+              </p>
+            </div>
+          </div>
+          <!-- BLEND NO 3  -->
+          <div
+            class="border border-background-white p-xs gap-ml grid grid-cols-3 justify-items-center"
+          >
+            <Image
+              class="w-[100px] md:w-[130px] h-auto object-fit pb-s mt-xs col-span-1"
+              src={Espressoblendno3}
+              alt="BLEND NO 3"
+            />
+
+            <div class="text-font-white col-span-2">
+              <h3>BLEND NO 3</h3>
+              <p>
+                Denne  espressoblanding er en fyldig, men mild og sød blanding.
+              </p>
+              <br />
+              <p>Noter af:</p>
+              <ul class="list-disc list-inside">
+                <li>Chokolade</li>
+                <li>Karamel</li>
+                <li>Ristede mandler og hasselnødder</li>
+              </ul>
+              <br />
+
+              <p>
+                Inspireret af den skandinaviske ristestil, men ristet med fokus
+                på at skabe en klassisk rund og fyldig espresso.
+              </p>
+            </div>
+          </div>
+          <!-- VELVET  -->
+          <div
+            class="border border-background-white p-xs gap-ml grid grid-cols-3 justify-items-center"
+          >
+            <Image
+              class="w-[100px] md:w-[130px] h-auto object-fit pb-s mt-xs col-span-1"
+              src={Espressoblendno3}
+              alt="VELVET"
+            />
+
+            <div class="text-font-white col-span-2">
+              <h3>VELVET</h3>
+              <p>
+                Signaturblend har til formål at tilfredsstille dine daglige
+                kaffebehov og er sammensat med en idé om at tilbyde en kaffe.
+              </p>
+              <br />
+              <p>Noter af:</p>
+              <ul class="list-disc list-inside">
+                <li>Chokolade</li>
+                <li>Nøddetonerne</li>
+              </ul>
+              <br />
+
+              <p>
+                Dette gør den til en meget behagelig og nem at drikke kaffe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</MainLayout>
