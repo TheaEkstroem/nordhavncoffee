@@ -1,0 +1,39 @@
+---
+const {
+  bgcolor = "",
+  bordercolor = "",
+  bghovercolor = "",
+  udAf = "",
+  textcolor = "",
+  texthovercolor = "",
+} = Astro.props;
+---
+
+<!-- Indikatior med pile -->
+<div
+  class="flex space-x-xs items-center sm:justify-end md:justify-start py-sm col-start-5 md:rotate-90 sm:row-start-6"
+>
+  <!-- Forrige Sektion -->
+  <a href="#3">
+    <button
+      class={`rotate-180 w-xl h-xl flex items-center justify-center rounded-full border-2 ${bordercolor} ${bgcolor} ${textcolor} 
+      ${bghovercolor} ${texthovercolor} transition`}
+    >
+      →
+    </button>
+  </a>
+
+  <!-- UdAf Tekst -->
+  <h2 class={`${textcolor} -rotate-90 text-s`}>{udAf}</h2>
+
+  <!-- Næste Sektion -->
+  <a href="#4">
+    <button
+      class={`w-xl h-xl flex items-center justify-center rounded-full border-2 ${bordercolor} ${bgcolor} ${textcolor} ${bghovercolor} ${texthovercolor} transition`}
+    >
+      →
+    </button>
+  </a>
+</div>
+
+<!-- Indikatior med pile slut-->

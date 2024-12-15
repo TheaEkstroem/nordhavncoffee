@@ -39,6 +39,22 @@ const {
           class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer1 z-50"
         />
       </div>
+
+      <div class="absolute inset-0 flex justify-center items-center">
+        <img
+          src="src/assets/images/kaffe/marcala.webp"
+          alt="kaffe"
+          class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer4 z-40"
+        />
+      </div>
+
+      <div class="absolute inset-0 flex justify-center items-center">
+        <img
+          src="src/assets/images/kaffe/marcala.webp"
+          alt="kaffe"
+          class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer5 z-40"
+        />
+      </div>
       <!-- Kaffebønner billede -->
       <div class="absolute inset-0 flex justify-center items-center">
         <img
@@ -93,18 +109,30 @@ const {
       // Start animation
       animate(
         ".mangeelementer1",
-        { x: [0, 0], y: [0, 0], rotate: [0, 15] }, // Tilføj rotation
+        { x: [0, 0], y: [0, 0], rotate: [0, 0] }, // Tilføj rotation
         { duration: 0.8 }
       );
       animate(
         ".mangeelementer2",
-        { x: [0, 200], y: [100, 0] },
+        { x: [0, 360], y: [250, 0] },
         { duration: 0.8 }
       );
 
       animate(
         ".mangeelementer3",
-        { x: [0, -150], y: [100, 0] },
+        { x: [0, -360], y: [250, 0] },
+        { duration: 0.8 }
+      );
+
+      animate(
+        ".mangeelementer4",
+        { x: [0, -150], y: [0, 0], rotate: [0, -15] }, // Tilføj rotation
+        { duration: 0.8 }
+      );
+
+      animate(
+        ".mangeelementer5",
+        { x: [0, 150], y: [0, 0], rotate: [0, 15] }, // Tilføj rotation
         { duration: 0.8 }
       );
 
@@ -125,6 +153,18 @@ const {
           ".mangeelementer3",
           { x: [0, 0], y: [0, 0] },
           { duration: 0.4 }
+        );
+
+        animate(
+          ".mangeelementer4",
+          { x: [0, 0], y: [0, 0], rotate: [0, 0] }, // Tilføj rotation
+          { duration: 0.8 }
+        );
+
+        animate(
+          ".mangeelementer5",
+          { x: [0, 0], y: [0, 0], rotate: [0, 0] }, // Tilføj rotation
+          { duration: 0.8 }
         );
       };
     });
