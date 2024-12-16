@@ -53,7 +53,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
           <h4 class="text-font-white py-xs">Hvad Du Får</h4>
 
           <!-- cards med de andre produkter man kan vælge i sit abonnement -->
-          <div class="flex gap-xs md:gap-ml">
+          <div class="flex gap-xs md:gap-ml pb-s">
             <Favoritesmallproduct
               bgcolor="bg-background-blue"
               imagealt="Billede af cajamarca kaffepose"
@@ -105,7 +105,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
             </div>
 
             <!-- Hyppighed -->
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between  pb-sm">
               <label class="text-font-white text-lg font-futura block"
                 >Hyppighed</label
               >
@@ -116,6 +116,8 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
                 <option>Hver måned</option>
               </select>
             </div>
+            <Button size="medium" variant="buttonyellow" href="/">KØB</Button>
+
           </div>
         </div>
       </div>
@@ -266,7 +268,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
         class="grid grid-cols-1 md:grid-cols-3 gap-xl py-sm md:py-3xl md:px-xl"
       >
         <!-- FARVORITTER -->
-        <div>
+        <div class="flex flex-col items-center justify-center gap-s">
           <div class="bg-brand-yellow w-[380px] h-[380px] p-s">
             <h3 class="font-bold text-center pb-xs">FARVORITTER</h3>
             <div class="flex justify-center">
@@ -299,14 +301,14 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
               </div>
             </div>
           </div>
+<div class="w-[380px]">
+          <Button class="w-full" size="large" variant="buttonblue"  href="/">KØB</Button>
+        </div>     
 
-          <!-- mangler rigtig knap  -->
-
-          <Link size="large" variant="button" size="medium" href="/">KØB</Link>
         </div>
 
         <!-- spicy -->
-        <div>
+        <div class="flex flex-col items-center justify-center gap-s">
           <div class="bg-brand-yellow w-[380px] h-[380px] p-s">
             <h3 class="font-bold text-center pb-xs">SPICY MIX</h3>
             <div class="flex justify-center">
@@ -340,13 +342,13 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
             </div>
           </div>
 
-          <!-- mangler rigtig knap  -->
 
-          <Link size="large" variant="button" size="medium" href="/">KØB</Link>
-        </div>
+          <div class="w-[380px]">
+            <Button class="w-full" size="large" variant="buttonblue"  href="/">KØB</Button>
+          </div>            </div>
 
         <!-- BLAND SELV -->
-        <div>
+        <div class="flex flex-col items-center justify-center gap-s">
           <div class="bg-brand-yellow w-[380px] h-[380px] p-s">
             <h3 class="font-bold text-center pb-xs">BLAND SELV</h3>
             <div class="flex justify-center">
@@ -379,9 +381,10 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
               </div>
             </div>
           </div>
-          <!-- mangler rigtig knap  -->
 
-          <Link size="large" variant="button" size="medium" href="/">KØB</Link>
+          <div class="w-[380px]">
+            <Button class="w-full" size="large" variant="buttonblue"  href="/">KØB</Button>
+          </div>       
         </div>
       </div>
     </div>
