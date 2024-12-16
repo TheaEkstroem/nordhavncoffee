@@ -3,18 +3,45 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import Historie1 from "../assets/images/historie/historie1.webp";
+import Historie2 from "../assets/images/historie/historie2.webp";
+
 ---
 
 <MainLayout title="Nordhavn Coffee">
   <article>
     <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
+
+
+
+    <!-- historie -->
+     <section class="px-s md:px-2xl py-3xl">
+      <h1>HØR VORES HISTORIE</h1>
+
+<Image src={Historie1} alt=""></Image>
+<div class="py-m">
+<h3>VI ÅBNER VORES CAFÉ</h3>
+<div class="grid md:grid-cols-2 gap-ml py-xs">
+
+<p>Vores rejse startede i 2007, hvor vi opfandt den mobile kaffebranche i Danmark og banede vejen for den gode, hurtige kop kaffe, serveret lige der hvor den drikkes. 
+  Vi konstruerede selv den første trehjulede kaffebil, der ikke kun bragte kvalitetskaffe, men også satte standarden for innovation inden for kaffe og eventcatering. Gennem kompetente og servicemindede baristaer blev budskabet om den gode kop kaffe hurtigt en del af vores identitet. </p>
+<p>
+  Vores identitet ligger ganske vist i Københavns Nordhavn, men for at nærme os byen har vi åbnet egen cafe i indre by. Her stræbes efter at præsentere de bedste sider af kafferne, komplimenteret med lette caferetter og særarrangementer. Baristaerne er uddannet hos os og kan svare på alle spørgsmål om kaffe og anbefalede bryggemetoder. Cafeen er åben, men kan også bookes til private arrangementer til mindre selskaber.
+
+</p>
+
+</div>
+</div>
+<Image src={Historie2} alt=""></Image>
+</section>
+
+
+   <!--  <Button>Klik!</Button>
     <p>
       Link til <Link href="https://www.kea.dk" target="_blank"
         >En anden side</Link
       >
     </p>
-    <Image src={thumbsup} alt="" />
+    <Image src={thumbsup} alt="" /> -->
   </article>
 </MainLayout>

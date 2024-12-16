@@ -1,5 +1,47 @@
 ---
+// Henter parametrene fra Astro.props
+const { href="#", target="_self", variant= "textlink", size = "inline" } = Astro.props; 
+
+//Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
+const linkStyling = "btn relative flex items-center p-xxs justify-center font-semibold transition duration-300 ease-in-out"; 
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
+const variantClasses = {
+    "buttonblue":" flex justify-center text-font-white bg-brand-blue border-2 border-transparent hover:bg-transparent hover:text-brand-blue hover:border-brand-blue" ,
+    "buttonstrokeblue":"flex justify-center text-brand-blue border-2 border-brand-blue hover:bg-brand-blue hover:text-font-white" ,
+
+    "buttonpurple": "flex justify-center text-brand-rosa bg-brand-purple border-2 border-transparent hover:bg-transparent hover:text-brand-purple hover:border-brand-purple",
+    "buttonstrokepurple": "flex justify-center text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-font-white",
+
+    "buttonyellow": "flex justify-center text-brand-blue bg-brand-yellow border-2 border-transparent hover:bg-transparent hover:text-brand-yellow hover:border-brand-yellow",
+    "buttonstrokeyellow": "flex justify-center text-brand-yellow border-2 border-brand-yellow hover:bg-brand-yellow hover:text-font-white",
+
+
+    "buttonrosa": "flex justify-center text-font-white bg-brand-rosa border-2 border-transparent hover:bg-transparent hover:text-brand-rosa hover:border-brand-rosa",
+    "buttonstrokerosa": "flex justify-center text-brand-rosa border-2 border-brand-rosa hover:bg-brand-rosa hover:text-font-white",
+
+};
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
+const sizeClasses = {
+   "small": "text-[16px] px-xxxs py-xxs",
+    "medium": "text-lg px-xxs py-xxs",
+    "large": "text-3xl px-xxs py-xxs"
+};
+
+const stroke = {
+"yellow": "" ,
+"blue":"",
+"rosa":"",
+"purple":""
+};
+ 
+const bgcolor ={
+"yellow": "" ,
+"blue":" ",
+"rosa":"",
+"purple":""
+};
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
+<a href={href} target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size], bgcolor,]}><slot /></a>

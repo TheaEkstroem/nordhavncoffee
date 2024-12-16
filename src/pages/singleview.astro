@@ -107,7 +107,7 @@ import Smallproduct from "../components/smallproduct.astro";
             </div>
 
             <!-- Hyppighed -->
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between pb-sm">
               <label class="text-font-white text-lg font-futura block"
                 >Hyppighed</label
               >
@@ -117,6 +117,9 @@ import Smallproduct from "../components/smallproduct.astro";
                 <option>Hver 14 dag</option>
                 <option>Hver måned</option>
               </select>
+            </div>
+            <div>
+              <Button size="medium" variant="buttonpurple" href="/">KØB</Button>
             </div>
           </div>
         </div>
@@ -268,7 +271,7 @@ import Smallproduct from "../components/smallproduct.astro";
         class="grid grid-cols-1 md:grid-cols-3 gap-xl py-sm md:py-3xl md:px-xl"
       >
         <!-- FARVORITTER -->
-        <div>
+        <div class="flex flex-col items-center justify-center gap-s">
           <div class="bg-purple-500 w-[380px] h-[380px] p-s">
             <h3 class="font-bold text-center pb-xs">FARVORITTER</h3>
             <div class="flex justify-center">
@@ -302,13 +305,13 @@ import Smallproduct from "../components/smallproduct.astro";
             </div>
           </div>
 
-<!-- mangler rigtig knap  -->
-
-          <Link size="large" variant="button" size="medium" href="/">KØB</Link>
+          <div class="w-[380px]">
+            <Button class="w-full" size="large" variant="buttonrosa" href="/">KØB</Button>
+            </div>
         </div>
 
         <!-- spicy -->
-        <div>
+        <div class="flex flex-col items-center justify-center gap-s">
           <div class="bg-purple-500 w-[380px] h-[380px] p-s">
             <h3 class="font-bold text-center pb-xs">SPICY MIX</h3>
             <div class="flex justify-center">
@@ -342,13 +345,15 @@ import Smallproduct from "../components/smallproduct.astro";
             </div>
           </div>
 
-          <!-- mangler rigtig knap  -->
-
-          <Link size="large" variant="button" size="medium" href="/">KØB</Link>
+          <div class="w-[380px]">
+            <Button class="w-full" size="large" variant="buttonrosa" href="/"
+              >KØB</Button
+            >
+          </div>
         </div>
 
         <!-- BLAND SELV -->
-        <div>
+        <div class="flex flex-col items-center justify-center gap-s">
           <div class="bg-purple-500 w-[380px] h-[380px] p-s">
             <h3 class="font-bold text-center pb-xs">BLAND SELV</h3>
             <div class="flex justify-center">
@@ -381,25 +386,29 @@ import Smallproduct from "../components/smallproduct.astro";
               </div>
             </div>
           </div>
-          <!-- mangler rigtig knap  -->
 
-          <Link size="large" variant="button" size="medium" href="/">KØB</Link>
+          <div class="w-[380px]">
+            <Button class="w-full" size="large" variant="buttonrosa" href="/"
+              >KØB</Button
+            >
+          </div>
         </div>
       </div>
     </div>
 
     <!-- MÅSKE DU VIL KUNNE LIDE -->
-     <div class="flex flex-col justify-center px-s md:px-2xl py-3xl">
-
+    <div class="flex flex-col justify-center px-s md:px-2xl py-3xl">
       <h3>MÅSKE DU VIL KUNNE LIDE</h3>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-xl py-sm md:py-3xl md:px-xl">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-xl py-sm md:py-3xl md:px-xl"
+      >
         <div
           class="w-[380px] h-[410px] p-s"
           style="background-image: url('/kaffelilla.webp'); background-position: center;"
         >
           <div class="flex justify-center z-20">
-            <div class="relative  py-xs">
+            <div class="relative py-xs">
               <Image
                 src={Velvetespresso}
                 alt="nordhavncoffee Velvetespresso"
@@ -411,13 +420,13 @@ import Smallproduct from "../components/smallproduct.astro";
             VELVET ESPRESSO
           </h3>
         </div>
-  
+
         <div
           class="w-[380px] h-[410px] p-s"
           style="background-image: url('/kaffegul.webp'); background-position: center;"
         >
           <div class="flex justify-center z-20">
-            <div class="relative  py-xs">
+            <div class="relative py-xs">
               <Image
                 src={Havensfilter}
                 alt="nordhavncoffee Havensfilter"
@@ -429,13 +438,13 @@ import Smallproduct from "../components/smallproduct.astro";
             HAVNENS BLEND
           </h3>
         </div>
-  
+
         <div
           class="w-[380px] h-[410px] p-s"
           style="background-image: url('/kaffeblaa.webp'); background-position: center;"
         >
           <div class="flex justify-center z-20">
-            <div class="relative  py-xs">
+            <div class="relative py-xs">
               <Image
                 src={Modernespresso}
                 alt="nordhavncoffee MODERN ITALIAN"
@@ -448,8 +457,6 @@ import Smallproduct from "../components/smallproduct.astro";
           </h3>
         </div>
       </div>
-
-     </div>
-   
+    </div>
   </article>
 </MainLayout>
