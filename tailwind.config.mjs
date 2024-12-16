@@ -162,13 +162,13 @@ export default {
           rosa: "#6C4852",
         },
         background: {
-          white: "#FCFCFC",
+          white: "#FDFDFC",
           beige: "#F7F5F1",
           rosa: "#7C545F",
           blue: "#7586A4",
         },
         font: {
-          white: "#FCFCFC",
+          white: "#FDFDFC",
           black: "#221E1F",
         },
       },
