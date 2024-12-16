@@ -1,0 +1,192 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Pilebtn from "../components/Pilebtn.astro";
+
+const {
+  navn = "",
+  bgcolor = "",
+  bordercolor = "",
+  bghovercolor = "",
+  udAf = "",
+  textcolor = "",
+  texthovercolor = "",
+} = Astro.props;
+---
+
+<!-- <section id="section-1" class="h-screen bg-brand-blue">
+  <h1 class="text-white text-4xl">Section 1</h1>
+  <a href="#section-4">
+    <button
+      class="w-xl h-xl flex items-center justify-center rounded-full border-2 border-yellow-500 bg-blue-500 text-yellow-500 hover:bg-yellow-500 hover:text-blue-500 transition"
+    >
+      Sidste
+    </button>
+  </a>
+  <a href="#section-2">
+    <button
+      class="w-xl h-xl flex items-center justify-center rounded-full border-2 border-yellow-500 bg-blue-500 text-yellow-500 hover:bg-yellow-500 hover:text-blue-500 transition"
+    >
+      Next
+    </button>
+  </a>
+
+  <section id="section-2" class="h-screen bg-brand-purple">
+    <h1 class="text-white text-4xl">Section 2</h1>
+    <a href="#section-1">
+      <button
+        class="w-xl h-xl flex items-center justify-center rounded-full border-2 border-yellow-500 bg-blue-500 text-yellow-500 hover:bg-yellow-500 hover:text-blue-500 transition"
+      >
+        Sidste
+      </button>
+    </a>
+    <a href="#section-3">
+      <button
+        class="w-xl h-xl flex items-center justify-center rounded-full border-2 border-yellow-500 bg-blue-500 text-yellow-500 hover:bg-yellow-500 hover:text-blue-500 transition"
+      >
+        Next
+      </button>
+    </a>
+
+    <section id="section-3" class="h-screen bg-brand-yellow">
+      <h1 class="text-white text-4xl">Section 3</h1>
+      <a href="#section-2">
+        <button
+          class="w-xl h-xl flex items-center justify-center rounded-full border-2 border-yellow-500 bg-blue-500 text-yellow-500 hover:bg-yellow-500 hover:text-blue-500 transition"
+        >
+          Sidste
+        </button>
+      </a>
+      <a href="#section-1">
+        <button
+          class="w-xl h-xl flex items-center justify-center rounded-full border-2 border-yellow-500 bg-blue-500 text-yellow-500 hover:bg-yellow-500 hover:text-blue-500 transition"
+        >
+          Next
+        </button>
+      </a>
+    </section>
+  </section>
+</section> --><!-- Card section lilla-->
+<MainLayout>
+  <section
+    id="kaffe-section-1"
+    class={`sticky top-0 h-screen w-screen bg-cover bg-center ${bgcolor} pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.8fr_0.1fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto_auto_auto] md:py-10xl`}
+  >
+    <!-- Indhold her -->
+
+    <div
+      class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
+    >
+      <div class="col-start-2 md:row-start-1 sm:row-start-1">
+        <h3 class={`${textcolor}`}>SINGLE</h3>
+        <h1 class={`text-8xl ${textcolor}`}>{navn}</h1>
+      </div>
+
+      <!--billede-->
+      <article
+        class="mangeelementerinview relative grid justify-center py-m md:col-start-3 md:col-end-4 md:row-span-full md:row-end-4 hover:origin-center"
+      >
+        <!-- Marcala billede -->
+        <div
+          class="md:absolute inset-0 md:flex md:justify-center md:items-center"
+        >
+          <img
+            src="src/assets/images/kaffe/marcala.webp"
+            alt="kaffe"
+            class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer1 z-50"
+          />
+        </div>
+        <!-- Kaffebønner billede -->
+        <div class="md:absolute inset-0 flex justify-center items-center">
+          <img
+            src="/kaffebønner.webp"
+            alt="bønner"
+            class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer2 z-20"
+          />
+        </div>
+
+        <!-- Kaffebønner billede -->
+        <div class="md:absolute inset-0 flex justify-center items-center">
+          <img
+            src="/kaffebønner.webp"
+            alt="bønner"
+            class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer3 z-20"
+          />
+        </div>
+      </article>
+
+      <!-- slut -->
+
+      <!--tekst-->
+      <h3 class={`${textcolor} md:text-2xl col-start-2 h-fit`}>80 - 275 DKK</h3>
+
+      <h2 class={`${textcolor} col-start-2 self-end text-2xl`}>
+        BYG DIT EGET ABONNEMENT
+      </h2>
+      <!-- slut -->
+
+      <!-- SINGLE BUTTON ------>
+      <div
+        class="flex items-center sm:justify-end md:justify-start md:col-start-2 md:row-start-6"
+      >
+        <button
+          class={`px-lg py-xs border-2 ${bordercolor} ${textcolor} font-bold text-xl ${bghovercolor} ${texthovercolor} transition`}
+        >
+          KØB NU
+          <span class="ml-2">→</span>
+        </button>
+      </div>
+      <!-- SINGLE BUTTON slut ------>
+    </div>
+
+    <div
+      class="flex items-center sm:justify-end md:justify-start md:col-start-5 md:row-start-6"
+    >
+      <a href="#section-1">
+        <button
+          class="w-xl h-xl flex items-center justify-center rounded-full border-2 border-yellow-500 bg-blue-500 text-yellow-500 hover:bg-yellow-500 hover:text-blue-500 transition"
+        >
+          Next
+        </button>
+      </a>
+    </div>
+  </section>
+</MainLayout>
+
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, inView } from "motion";
+
+  inView(".mangeelementerinview", ({ target }) => {
+    console.log("Element is in view!");
+
+    // Start animation
+    animate(
+      ".mangeelementer1",
+      { x: [0, 0], y: [0, 0], rotate: [0, 15] }, // Tilføj rotation
+      { duration: 0.8 }
+    );
+    animate(
+      ".mangeelementer2",
+      { x: [0, 200], y: [100, 0] },
+      { duration: 0.8 }
+    );
+
+    animate(
+      ".mangeelementer3",
+      { x: [0, -150], y: [100, 0] },
+      { duration: 0.8 }
+    );
+
+    // Out-of-view animation
+    return () => {
+      console.log("Element is out of view!");
+      animate(
+        ".mangeelementer1",
+        { x: [0, 0], y: [0, 0], rotate: [-10, 0] }, // Roter tilbage
+        { duration: 0.4 }
+      );
+      animate(".mangeelementer2", { x: [0, 0], y: [0, 0] }, { duration: 0.4 });
+      animate(".mangeelementer3", { x: [0, 0], y: [0, 0] }, { duration: 0.4 });
+    };
+  });
+</script>

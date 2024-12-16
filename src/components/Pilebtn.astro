@@ -8,12 +8,22 @@ const {
   texthovercolor = "",
 } = Astro.props;
 
+// Destrukturering af værdier fra Astro.props
 const { currentSection = 1, totalSections = 4 } = Astro.props;
+
+// Console log for currentSection og totalSections
+console.log("Current Section:", currentSection);
+console.log("Total Sections:", totalSections);
+
 // Beregn ID'erne for forrige og næste sektion
 const prevSection =
   currentSection > 1 ? `kaffe-${currentSection - 1}` : `kaffe-${totalSections}`;
 const nextSection =
   currentSection < totalSections ? `kaffe-${currentSection + 1}` : `kaffe-1`;
+
+// Console log for prevSection og nextSection
+console.log("Previous Section:", prevSection);
+console.log("Next Section:", nextSection);
 ---
 
 <div
