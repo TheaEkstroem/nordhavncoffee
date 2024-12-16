@@ -7,14 +7,7 @@
     --color-primary: 255 115 179;
   }
 }
-/* 
-@font-face {
-    font-family: "futura-pt", sans-serif;
-font-weight: 500;
-font-style: normal;
-    src: url('/think.regular.woff2') format('woff2');
-} 
- */
+
 html {
   scroll-behavior: smooth;
 }
@@ -22,36 +15,48 @@ h1 {
   font-family: "futura-pt", sans-serif;
   font-size: 85px;
   font-weight: 0;
+  color: #150E10;
+
 }
 
 h2 {
   font-family: "futura-pt", sans-serif;
   font-size: 50px;
   font-weight: 0;
+  color: #150E10;
+
 }
 
 h3 {
   font-family: "futura-pt", sans-serif;
   font-size: 40px;
   font-weight: 0;
+  color: #150E10;
+
 }
 
 h4 {
   font-family: "futura-pt", sans-serif;
   font-size: 30px;
   font-weight: 0;
+  color: #150E10;
+
 }
 
 h5 {
   font-family: "futura-pt", sans-serif;
   font-size: 25px;
   font-weight: 0;
+  color: #150E10;
+
 }
 
 p {
   font-family: "Geologica", sans-serif;
   font-size: 18px;
   font-weight: 0;
+  color: #150E10;
+ 
 }
 
 @media (max-width: 768px) {
