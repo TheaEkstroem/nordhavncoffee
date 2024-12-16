@@ -15,7 +15,7 @@ const {
 <!-- Card section lilla-->
 <section
   id="kaffe-section-1"
-  class={`sticky top-0 h-screen w-screen bg-cover bg-center ${bgcolor} pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto] md:py-10xl`}
+  class={`sticky top-0 h-screen w-screen bg-cover bg-center ${bgcolor} pt-10 grid sm:grid-cols-[0.1fr_1fr_0.1fr_0.1fr] md:grid-cols-[0.1fr_1fr_0.8fr_0.1fr] grid-rows-[auto_1fr_auto_auto_auto_auto_auto] md:py-10xl`}
 >
   <!-- Indhold her -->
 
@@ -32,7 +32,9 @@ const {
       class="mangeelementerinview relative grid justify-center py-m md:col-start-3 md:col-end-4 md:row-span-full md:row-end-4 hover:origin-center"
     >
       <!-- Marcala billede -->
-      <div class="absolute inset-0 flex justify-center items-center">
+      <div
+        class="md:absolute inset-0 md:flex md:justify-center md:items-center"
+      >
         <img
           src="src/assets/images/kaffe/marcala.webp"
           alt="kaffe"
@@ -40,7 +42,7 @@ const {
         />
       </div>
       <!-- Kaffebønner billede -->
-      <div class="absolute inset-0 flex justify-center items-center">
+      <div class="md:absolute inset-0 flex justify-center items-center">
         <img
           src="/kaffebønner.webp"
           alt="bønner"
@@ -49,7 +51,7 @@ const {
       </div>
 
       <!-- Kaffebønner billede -->
-      <div class="absolute inset-0 flex justify-center items-center">
+      <div class="md:absolute inset-0 flex justify-center items-center">
         <img
           src="/kaffebønner.webp"
           alt="bønner"
@@ -70,7 +72,7 @@ const {
 
     <!-- SINGLE BUTTON ------>
     <div
-      class="flex items-center sm:justify-end md:justify-start md:col-start-2 md:row-start-5"
+      class="flex items-center sm:justify-end md:justify-start md:col-start-2 md:row-start-6"
     >
       <button
         class={`px-lg py-xs border-2 ${bordercolor} ${textcolor} font-bold text-xl ${bghovercolor} ${texthovercolor} transition`}
@@ -81,7 +83,12 @@ const {
     </div>
     <!-- SINGLE BUTTON slut ------>
   </div>
-  <Pilebtn />
+
+  <div
+    class="flex items-center sm:justify-center sm:col-start-2 md:justify-start md:col-start-4 md:row-start-6"
+  >
+    <Pilebtn />
+  </div>
 
   <script>
     /* Import af Motion One biblioteket */

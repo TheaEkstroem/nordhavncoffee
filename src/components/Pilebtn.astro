@@ -7,27 +7,34 @@ const {
   textcolor = "",
   texthovercolor = "",
 } = Astro.props;
+
+const { currentSection = 1, totalSections = 4 } = Astro.props;
+// Beregn ID'erne for forrige og næste sektion
+const prevSection =
+  currentSection > 1 ? `kaffe-${currentSection - 1}` : `kaffe-${totalSections}`;
+const nextSection =
+  currentSection < totalSections ? `kaffe-${currentSection + 1}` : `kaffe-1`;
 ---
 
-<!-- Indikatior med pile -->
 <div
   class="flex space-x-xs items-center sm:justify-end md:justify-start py-sm col-start-5 md:rotate-90 sm:row-start-6"
 >
   <!-- Forrige Sektion -->
-  <a href="#3">
+  <a href={`#${prevSection}`}>
     <button
-      class={`rotate-180 w-xl h-xl flex items-center justify-center rounded-full border-2 ${bordercolor} ${bgcolor} ${textcolor} 
-      ${bghovercolor} ${texthovercolor} transition`}
+      class={`rotate-180 w-xl h-xl flex items-center justify-center rounded-full border-2 ${bordercolor} ${bgcolor} ${textcolor} ${bghovercolor} ${texthovercolor} transition`}
     >
       →
     </button>
   </a>
 
   <!-- UdAf Tekst -->
-  <h2 class={`${textcolor} -rotate-90 text-s`}>{udAf}</h2>
+  <h2 class={`${textcolor} -rotate-90 text-s`}>
+    {`${currentSection}/${totalSections}`}
+  </h2>
 
   <!-- Næste Sektion -->
-  <a href="#4">
+  <a href={`#${nextSection}`}>
     <button
       class={`w-xl h-xl flex items-center justify-center rounded-full border-2 ${bordercolor} ${bgcolor} ${textcolor} ${bghovercolor} ${texthovercolor} transition`}
     >
@@ -35,5 +42,4 @@ const {
     </button>
   </a>
 </div>
-
 <!-- Indikatior med pile slut-->
