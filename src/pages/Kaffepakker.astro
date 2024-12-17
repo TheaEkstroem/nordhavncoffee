@@ -1,7 +1,8 @@
 ---
-import Kaffe from "../components/Kaffe.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
+import Kaffecombo from "../components/Kaffecombo.astro";
+import Kaffe from "../components/Kaffe.astro";
 ---
 
 <MainLayout title="sortiment">
@@ -15,14 +16,17 @@ import Link from "../components/Link.astro";
         >
       </li>
       <li>
-        <Link size="medium" variant="textlink" size="medium" href="/Kaffepakker"
-          >Pakkeløsning</Link
+        <Link
+          size="medium"
+          variant="textlink"
+          size="medium"
+          href="/Testanimation">Pakkeløsning</Link
         >
       </li>
     </ul>
     <!-- Kaffesektioner -->
     <section id="kaffe-1">
-      <Kaffe
+      <Kaffecombo
         navn="MARCALA"
         udAf="1/4"
         bgcolor="bg-brand-blue"
@@ -30,13 +34,11 @@ import Link from "../components/Link.astro";
         bghovercolor="hover:bg-brand-yellow"
         texthovercolor="hover:text-brand-blue"
         textcolor="text-brand-yellow"
-        currentSection={1}
-        totalSections={4}
       />
     </section>
 
     <section id="kaffe-2">
-      <Kaffe
+      <Kaffecombo
         navn="BLEND NO3"
         udAf="2/4"
         bgcolor="bg-brand-purple"
@@ -44,13 +46,11 @@ import Link from "../components/Link.astro";
         bghovercolor="hover:bg-brand-rosa"
         texthovercolor="hover:text-brand-purple"
         textcolor="text-brand-rosa"
-        currentSection={2}
-        totalSections={4}
       />
     </section>
 
     <section id="kaffe-3">
-      <Kaffe
+      <Kaffecombo
         navn="HAVENS BLEND"
         udAf="3/4"
         bgcolor="bg-brand-yellow"
@@ -58,13 +58,11 @@ import Link from "../components/Link.astro";
         bghovercolor="hover:bg-brand-blue"
         texthovercolor="hover:text-brand-yellow"
         textcolor="text-brand-blue"
-        currentSection={3}
-        totalSections={4}
       />
     </section>
 
     <section id="kaffe-4">
-      <Kaffe
+      <Kaffecombo
         navn="CAJAMARCA"
         udAf="4/4"
         bgcolor="bg-brand-rosa"
@@ -72,8 +70,6 @@ import Link from "../components/Link.astro";
         bghovercolor="hover:bg-brand-purple"
         texthovercolor="hover:text-brand-rosa"
         textcolor="text-brand-purple"
-        currentSection={4}
-        totalSections={4}
       />
     </section>
   </div>

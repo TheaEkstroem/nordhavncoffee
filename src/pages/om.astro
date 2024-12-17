@@ -1,22 +1,351 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import { Image } from "astro:assets";
+import Kaffebønne1 from "../assets/images/kaffebønner/kaffebønne1.webp";
+import Kaffebønne2 from "../assets/images/kaffebønner/kaffebønne2.webp";
+import Kaffebønne3 from "../assets/images/kaffebønner/kaffebønne3.webp";
+import nordhavnkaffe from "../assets/images/om/kaffebutik.png";
+import Kaffepose from "../assets/images/om/kaffepose.png";
+import Nordhavnkop from "../assets/images/om/kaffekop.png";
+import Kaffebil from "../assets/images/om/kaffebil.png";
 ---
-<MainLayout title="Titel">
-	<article>
+<!-- overflow-hidden -->
 
-		<h1>Index overskrift</h1>
-<h2>Index overskrift</h2>
-<h3>Index overskrift</h3>
-<h4>Index overskrift</h4>
-<h5>Index overskrift</h5>
-<p>Index overskrift</p>
+<MainLayout title="Nordhavncofffee historie">
+  <article class="bg-background-beige">
+    <div class="px-s md:px-2xl pt-ml">
+        <h1 class="text-center">Hvem er Nordhavn Coffee</h1>
+        <h4 class="text-center">Hvad står vi får hos Nordhavn Coffee???</h4>
+      </div>
+    <!-- Section 1: Nordhavn Coffee Cafe -->
+    <div class="parallaxgrafik relative h-[500px] md:h-screen w-full">
+      <!-- Parallax -->
+       <!-- hvis der skal overflow-hidden på skal den sættes på div nedenfor -->
+      <div
+        class="absolute inset-0 w-full h-full grid grid-cols-10  z-0"
+      >
+        <Image src={Kaffebønne1} alt="Kaffebønne" class="col-start-2 parallaxgrafik1" />
+        <Image src={Kaffebønne2} alt="Kaffebønne" class="col-start-5 parallaxgrafik2" />
+        <Image src={Kaffebønne2} alt="Kaffebønne" class="col-start-8 parallaxgrafik3" />
+        <Image
+          src={Kaffebønne3}
+          alt="Kaffebønne"
+          class="col-start-3 col-span-2 parallaxgrafik4"
+        />
+        <Image src={Kaffebønne2} alt="Kaffebønne" class="col-start-9 parallaxgrafik5" />
+      </div>
 
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+      <!--  SVG and Text -->
+      <div class="relative z-10 flex items-center justify-center h-full p-s">
+        <!-- gul cirkel -->
+       <!--  <div
+          class="absolute top-2xl left-9xl w-32 h-32 bg-brand-yellow rounded-full"
+        >
+        </div> -->
+
+        <svg
+          class="absolute md:w-[822px] md:h-[398px]"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 922 398"
+          fill="none"
+        >
+          <path
+            d="M1 397H921V1H146.472C126.605 1 110.5 17.105 110.5 36.9716C110.5 76.7047 77.5888 108.915 37.8557 108.915C17.6973 108.915 1 125.256 1 145.415V397Z"
+            fill="white"
+            stroke="#150E10"
+            stroke-width="2"></path>
+        </svg>
+
+        <!-- Centered Text Block -->
+        <div
+          class="grid grid-cols-2 gap-xs md:gap-2xl items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-[519px] w-[300px]"
+        >
+          <p class="mb-xxxs">
+            I 2014 tog Nordhavn Coffee det første store skridt mod at skabe en
+            helhedsløsning for kaffe ved at åbne sit eget kafferisteri.
+          </p>
+          <Image
+            src={nordhavnkaffe}
+            alt="Illustration af Nordhavn coffee caffée"
+            class="w-[120px] h-auto md:w-[250px] md:h-auto"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Kaffepose -->
+    <div class="parallaxgrafik relative h-[500px]  md:h-screen w-full">
+      <div
+        class="absolute inset-0 w-full h-full grid grid-cols-10  z-0"
+      >
+        <Image src={Kaffebønne1} alt="Kaffebønne" class="col-start-2 parallaxgrafik1_2" />
+        <Image src={Kaffebønne2} alt="Kaffebønne" class="col-start-5 parallaxgrafik2_2" />
+        <Image src={Kaffebønne2} alt="Kaffebønne" class="col-start-8 parallaxgrafik3_2" />
+        <Image
+          src={Kaffebønne3}
+          alt="Kaffebønne"
+          class="col-start-3 col-span-2 parallaxgrafik4_2"
+        />
+        <Image src={Kaffebønne2} alt="Kaffebønne" class="col-start-9 parallaxgrafik5_2" />
+      </div>
+
+      <!-- text -->
+      <div class="relative z-10 flex items-center justify-center h-full p-s">
+        <!-- gul cirkel -->
+        <div
+          class="absolute top-2xl left-9xl w-32 h-32 bg-brand-yellow rounded-full"
+        >
+        </div>
+
+        <svg
+        class="absolute md:w-[822px] md:h-[398px]"
+          xmlns="http://www.w3.org/2000/svg"         
+          viewBox="0 0 920 396"
+          fill="none"
+        >
+          <path
+            d="M920 396H0V0H774.528C794.395 0 810.5 16.105 810.5 35.9716C810.5 75.7047 843.411 107.915 883.144 107.915C903.303 107.915 920 124.256 920 144.415V396Z"
+            fill="#EBE089"></path>
+        </svg>
+
+        <!-- Centered Text Block -->
+        <div
+          class="grid grid-cols-2 gap-xs md:gap-2xl items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  md:w-[519px] w-[300px]"
+        >
+          <Image src={Kaffepose} alt="Illustration af Nordhavn coffee kop"            
+          class="w-[80px] h-auto md:w-[140px] md:h-auto"
+          
+          />
+
+          <p class="mb-xxxs">
+            Vi bruger nøje udvalgte, bønner fra verdens bedste små kaffefarme.
+            Vi sikrer, at hver bønnes unikke potentiale udnyttes til det fulde.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Kaffekop -->
+    <div class="parallaxgrafik relative h-[500px] md:h-screen w-full">
+      <div
+        class="absolute inset-0 w-full h-full grid grid-cols-10 z-0"
+      >
+        <Image src={Kaffebønne1} alt="Kaffebønne" class="col-start-2 parallaxgrafik1_3" />
+        <Image src={Kaffebønne2} alt="Kaffebønne" class="col-start-5 parallaxgrafik2_3" />
+        <Image src={Kaffebønne2} alt="Kaffebønne" class="col-start-8 parallaxgrafik3_3" />
+        <Image
+          src={Kaffebønne3}
+          alt="Kaffebønne"
+          class="col-start-3 col-span-2 parallaxgrafik4_3"
+        />
+        <Image src={Kaffebønne2} alt="Kaffebønne" class="col-start-9 parallaxgrafik5_3" />
+      </div>
+
+      <!--  SVG and Text -->
+      <div class="relative z-10 flex items-center justify-center h-full p-s">
+        <!-- gul cirkel -->
+        <div
+          class="absolute top-2xl left-9xl w-32 h-32 bg-brand-yellow rounded-full"
+        >
+        </div>
+
+        <svg
+        class="absolute md:w-[822px] md:h-[398px]"
+          xmlns="http://www.w3.org/2000/svg"
+       
+          viewBox="0 0 922 398"
+          fill="none"
+        >
+          <path
+            d="M1 397H921V1H146.472C126.605 1 110.5 17.105 110.5 36.9716C110.5 76.7047 77.5888 108.915 37.8557 108.915C17.6973 108.915 1 125.256 1 145.415V397Z"
+            fill="white"
+            stroke="#150E10"
+            stroke-width="2"></path>
+        </svg>
+
+        <!-- Centered Text Block -->
+        <div
+          class="grid grid-cols-2 gap-xs md:gap-2xl items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-[519px] w-[300px]"
+        >
+          <p class="mb-xxxs">
+            Hver kop byder på smag, aroma og håndværk – skabt til kaffeelskeren
+            på farten eller i ro hvor kvalitet og bæredygtighed er i fokus.
+          </p>
+          <Image src={Nordhavnkop} alt="Illustration af Nordhavn coffee kop"
+          class="w-[120px] h-auto md:w-[240px] md:h-auto" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: mobil kaffe -->
+    <div class="parallaxgrafik relative h-[600px] md:h-screen w-full">
+      <div
+        class="absolute inset-0 w-full h-full grid grid-cols-10  z-0"
+      >
+        <Image src={Kaffebønne1} alt="" class="col-start-2 parallaxgrafik1_4" />
+        <Image src={Kaffebønne2} alt="" class="col-start-5 parallaxgrafik2_4" />
+        <Image src={Kaffebønne2} alt="" class="col-start-8 parallaxgrafik3_4" />
+        <Image
+          src={Kaffebønne3}
+          alt=""
+          class="col-start-3 col-span-2 parallaxgrafik4_4"
+        />
+        <Image src={Kaffebønne2} alt="" class="col-start-9 parallaxgrafik5_4" />
+      </div>
+
+      <!--  SVG and Text -->
+      <div class="relative z-10 flex items-center justify-center h-full p-s">
+        <!-- gul cirkel -->
+        <div
+          class="absolute top-2xl left-9xl w-32 h-32 bg-brand-yellow rounded-full"
+        >
+        </div>
+
+        <svg
+        class="absolute md:w-[822px] md:h-[398px]"
+
+          xmlns="http://www.w3.org/2000/svg"
+      
+          viewBox="0 0 920 396"
+          fill="none"
+        >
+          <path
+            d="M920 396H0V0H774.528C794.395 0 810.5 16.105 810.5 35.9716C810.5 75.7047 843.411 107.915 883.144 107.915C903.303 107.915 920 124.256 920 144.415V396Z"
+            fill="#EBE089"></path>
+        </svg>
+
+        <!--  Text Block -->
+        <div
+          class="grid grid-cols-2 gap-xs md:gap-2xl items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-[519px] w-[300px]"
+        >
+          <Image
+            src={Kaffebil}
+            alt="Illustration af Nordhavn coffee mobile kaffevogn"
+            class="w-[120px] h-auto md:w-[240px] md:h-auto"
+          />
+
+          <p class="mb-xxxs">
+            Vi bruger nøje udvalgte, bønner fra verdens bedste små kaffefarme.
+            Vi sikrer, at hver bønnes unikke potentiale udnyttes til det fulde.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script>
+    import { animate, scroll } from "motion";
+
+  // Parallax for Section 1
+  scroll(animate(".parallaxgrafik1", { y: [200, -400] }), {
+    target: document.querySelector(".parallaxgrafik1"),
+    offset: ["start end", "end start"],
+  });
+
+  scroll(animate(".parallaxgrafik2", {  y: [600, 0] }), {
+    target: document.querySelector(".parallaxgrafik2"),
+    offset: ["start end", "end start"],
+  });
+
+  scroll(animate(".parallaxgrafik3", { y: [800, -200] }), {
+    target: document.querySelector(".parallaxgrafik3"),
+    offset: ["start end", "end start"],
+  });
+
+  scroll(animate(".parallaxgrafik4", {  y: [500, 0] }), {
+    target: document.querySelector(".parallaxgrafik4"),
+    offset: ["start end", "end start"],
+  });
+
+  scroll(animate(".parallaxgrafik5", {  y: [700, 0] }), {
+    target: document.querySelector(".parallaxgrafik5"),
+    offset: ["start end", "end start"],
+  });
+
+  // Parallax for Section 2
+  scroll(animate(".parallaxgrafik1_2", { y: [200, -400] }), {
+    target: document.querySelector(".parallaxgrafik1_2"),
+    offset: ["start end", "end start"],
+  });
+
+  scroll(animate(".parallaxgrafik2_2", {  y: [900, 0] }), {
+    target: document.querySelector(".parallaxgrafik2_2"),
+    offset: ["start end", "end start"],
+  });
+
+  scroll(animate(".parallaxgrafik3_2", { y: [800, -200] }), {
+    target: document.querySelector(".parallaxgrafik3_2"),
+    offset: ["start end", "end start"],
+  });
+
+  scroll(animate(".parallaxgrafik4_2", {  y: [600, 0] }), {
+    target: document.querySelector(".parallaxgrafik4_2"),
+    offset: ["start end", "end start"],
+  });
+
+  scroll(animate(".parallaxgrafik5_2", {  y: [700, 0] }), {
+    target: document.querySelector(".parallaxgrafik5_2"),
+    offset: ["start end", "end start"],
+  });
+
+
+    
+
+
+    /* sektion 3 parralax */
+    scroll(animate(".parallaxgrafik1_3", { y: [200, -800] }), {
+      target: document.querySelector(".parallaxgrafik1_3"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik2_3", {  y: [2000, 0] }), {
+      target: document.querySelector(".parallaxgrafik2_3"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik3_3", { y: [800, -400] }), {
+      target: document.querySelector(".parallaxgrafik3_3"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik4_3", {  y: [600, 0] }), {
+      target: document.querySelector(".parallaxgrafik4_3"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik5_3 ", {  y: [700, 0] }), {
+      target: document.querySelector(".parallaxgrafik5_3"),
+      offset: ["start end", "end start"],
+    });
+
+
+
+    /* sektion 4 parralax */
+    scroll(animate(".parallaxgrafik1_4", { y: [200, -800] }), {
+      target: document.querySelector(".parallaxgrafik1_4"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik2_4", { y: [2000, 0] }), {
+      target: document.querySelector(".parallaxgrafik2_4"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik3_4", { y: [800, -400] }), {
+      target: document.querySelector(".parallaxgrafik3_4"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik4_4", { y: [600, 0] }), {
+      target: document.querySelector(".parallaxgrafik4_4"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik5_4", {  y: [700, 0] }), {
+      target: document.querySelector(".parallaxgrafik5_4"),
+      offset: ["start end", "end start"],
+    });
+
+    
+  </script>
 </MainLayout>

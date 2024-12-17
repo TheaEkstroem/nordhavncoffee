@@ -3,23 +3,20 @@
 const { href="#", target="_self", variant= "textlink", size = "inline" } = Astro.props; 
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper
-const linkStyling = ""; 
+const linkStyling = " py-xxxs"; 
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
-    "textlink": "text-[#221E1F] hover:underline ",
-    "link": "text-[#221E1F] hover:underline",
-    "button": "bg-[#221E1F] text-[#FCFCFC] px-s py-xxxs hover:text-[#221E1F] hover:bg-[#FCFCFC] hover:border ",
-
-    "primary": "",
-    "secondary": ""
+    "textlink": "text-font-black hover:underline ",
+    "link": "text-font-black hover:underline",
+    "button": "px-xs bg-rosa-800 text-font-white  hover:text-rosa-800 hover:bg-background-white hover:border ",
 };
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
-   "small": "text-[16px] px-3 py-2",
-    "medium": "text-lg px-5 py-2",
-    "large": "text-3xl px-9 py-2"
+   "small": "text-[16px] px-xxxs py-xxxs",
+    "medium": "text-lg px-xxxs py-xxxs",
+    "large": "text-3xl px-xxxs py-xxxs"
 };
 ---
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->

@@ -1,0 +1,19 @@
+---
+interface Props {
+  bgcolor: string;
+  imagealt: string;
+  image: string;
+}
+
+const { bgcolor,imagealt, image } = Astro.props;
+
+---
+<div class="flex flex-col  items-center pt-xxs pb-s ">
+<div class={`p-6 w-4xl h-10xl rounded-full flex justify-center items-center ${bgcolor}`}>
+  <img class="h-8xl " src={image} alt={imagealt} />
+</div>
+<div class="p-xs">
+  <input id="default-checkbox" type="checkbox" value="" class="w-s h-s text-brand-rosa bg-brand-rosa border-background-white rounded focus:ring-background-white  focus:ring-2 ">
+  <label for="default-checkbox" class=" text-sm font-medium text-font-white dark:text-gray-300"></label>
+</div>
+</div>
