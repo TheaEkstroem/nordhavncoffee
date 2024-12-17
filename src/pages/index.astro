@@ -5,43 +5,241 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Historie1 from "../assets/images/historie/historie1.webp";
 import Historie2 from "../assets/images/historie/historie2.webp";
-
+import Kaffebønne1 from "../assets/images/kaffebønner/kaffebønne1.webp";
+import Kaffebønne2 from "../assets/images/kaffebønner/kaffebønne2.webp";
+import Kaffebønne3 from "../assets/images/kaffebønner/kaffebønne3.webp";
 ---
 
 <MainLayout title="Nordhavn Coffee">
   <article>
-    <h1>Index overskrift</h1>
+    <section>
+      <div class="parallaxgrafik relative h-[600px] md:h-screen w-full">
+        <div
+          class="absolute inset-0 w-full h-full grid grid-cols-10 grid-rows-4 z-0"
+        >
+          <Image
+            src={Kaffebønne1}
+            alt="bønne"
+            class="col-start-2 parallaxgrafik1_4"
+          />
+          <Image
+            src={Kaffebønne2}
+            alt="bønne"
+            class="col-start-5 parallaxgrafik2_4"
+          />
+          <Image
+            src={Kaffebønne2}
+            alt="bønne"
+            class="col-start-8 parallaxgrafik3_4"
+          />
+          <Image
+            src={Kaffebønne3}
+            alt="bønne"
+            class="col-start-3 col-span-2 parallaxgrafik4_4"
+          />
+          <Image
+            src={Kaffebønne2}
+            alt="bønne"
+            class="col-start-9 parallaxgrafik5_4"
+          />
+        </div>
+        <div
+          class="absolute inset-0 w-full h-full grid grid-cols-10 grid-rows-4 z-10"
+        >
+          <h1 class="row-start-2">NORDHAVN COFFEE</h1>
+          <div
+            class="row-start-3 md:row-start-4 md:col-start-2 col-span-4 flex justify-center mt-10"
+          >
+            <Link size="medium" variant="textlink" href="/sortiment">
+              <button
+                class="px-xl py-xs border-2 font-futura font-bold text-xl bg-rosa-900 text-beige-50 transition"
+              >
+                Find abonnement
+                <span class="ml-2">→</span>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="bg-background-beige flex-col justify-center px-s md:px-2xl py-3xl grid grid-cols-1 md:grid-cols-3 gap-xl md:py-3xl z-20"
+    >
+      <div>
+        <div class="relative w-[378px] h-[396px]">
+          <!-- SVG background -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 378 396"
+            class="absolute inset-0 w-full h-full"
+            fill="none"
+          >
+            <path
+              d="M378 396H0V0H221.642C241.509 0 257.614 16.105 257.614 35.9716C257.614 75.7047 289.824 107.915 329.557 107.915H338C360.091 107.915 378 125.823 378 147.915V396Z"
+              fill="#6C4852"></path>
+          </svg>
 
+          <!-- Tal "1" -->
+          <div
+            class="absolute top-xxxs right-xs w-3xl h-3xl bg-brand-yellow rounded-full"
+          >
+          </div>
+        </div>
+        <div>
+          <h3>Besøg vores café</h3>
+          <div class="gap-ml py-xs">
+            <p>
+              Kom forbi vores hyggelige kaffebar og smag på de friskristede
+              bønner. Georg Brandes Plads 2, 1307 København, Denmark
+            </p>
+          </div>
+        </div>
+      </div>
 
+      <div>
+        <div class="relative w-[378px] h-[396px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="378"
+            height="396"
+            viewBox="0 0 378 396"
+            fill="none"
+            class="absolute inset-0 w-full h-full"
+          >
+            <path
+              d="M378 0H0V396H221.642C241.509 396 257.614 379.895 257.614 360.028C257.614 320.295 289.824 288.085 329.557 288.085H338C360.091 288.085 378 270.177 378 248.085V0Z"
+              fill="#6C4852"></path>
+          </svg>
 
+          <div
+            class="absolute -bottom-xxxs right-xs w-3xl h-3xl bg-brand-yellow rounded-full"
+          >
+          </div>
+        </div>
+        <div>
+          <h3>Vores risteri</h3>
+          <div class="gap-ml py-xs">
+            <p>
+              Al kaffen ristes i små portioner og pakkes efterfølgende i hånden.
+              Hver dag sender vi pakker til hele verden med god friskristet
+              kaffe, ristet efter unikke profiler, der løbende udvikles efter
+              bønnernes potentiale.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="relative w-[378px] h-[396px]">
+          <!-- SVG background -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 378 396"
+            class="absolute inset-0 w-full h-full"
+            fill="none"
+          >
+            <path
+              d="M378 396H0V0H221.642C241.509 0 257.614 16.105 257.614 35.9716C257.614 75.7047 289.824 107.915 329.557 107.915H338C360.091 107.915 378 125.823 378 147.915V396Z"
+              fill="#6C4852"></path>
+          </svg>
+
+          <!-- Tal "3" -->
+          <div
+            class="absolute top-xxxs right-xs w-3xl h-3xl bg-brand-yellow rounded-full"
+          >
+          </div>
+        </div>
+        <div>
+          <h3>Lej os til dit event</h3>
+          <div class="gap-ml py-xs">
+            <p>
+              Nordhavn Coffee tilbyder en unik kaffeoplevelse til dine events.
+              Vores mobile kaffebarer og specialdesignede køretøjer er perfekte
+              til at tilføje et strejf af elegance og god smag til enhver
+              lejlighed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- historie -->
-     <section class="px-s md:px-2xl py-3xl">
+    <section class="px-s md:px-2xl py-3xl">
       <h1>HØR VORES HISTORIE</h1>
+      <div class="grid md:grid-cols-2 gap-ml py-xs">
+        <p>
+          Vores rejse startede i 2007, hvor vi opfandt den mobile kaffebranche i
+          Danmark og banede vejen for den gode, hurtige kop kaffe, serveret lige
+          der hvor den drikkes.  Vi konstruerede selv den første trehjulede
+          kaffebil, der ikke kun bragte kvalitetskaffe, men også satte
+          standarden for innovation inden for kaffe og eventcatering. Gennem
+          kompetente og servicemindede baristaer blev budskabet om den gode kop
+          kaffe hurtigt en del af vores identitet.
+        </p>
 
-<Image src={Historie1} alt=""></Image>
-<div class="py-m">
-<h3>VI ÅBNER VORES CAFÉ</h3>
-<div class="grid md:grid-cols-2 gap-ml py-xs">
+        <Image src={Historie1} alt="" />
+        <div class="py-m">
+          <h3>VI ÅBNER VORES CAFÉ</h3>
+          <div class="grid md:grid-cols-2 gap-ml py-xs">
+            <p>
+              Vores rejse startede i 2007, hvor vi opfandt den mobile
+              kaffebranche i Danmark og banede vejen for den gode, hurtige kop
+              kaffe, serveret lige der hvor den drikkes.  Vi konstruerede selv
+              den første trehjulede kaffebil, der ikke kun bragte
+              kvalitetskaffe, men også satte standarden for innovation inden for
+              kaffe og eventcatering. Gennem kompetente og servicemindede
+              baristaer blev budskabet om den gode kop kaffe hurtigt en del af
+              vores identitet.
+            </p>
+            <p>
+              Vores identitet ligger ganske vist i Københavns Nordhavn, men for
+              at nærme os byen har vi åbnet egen cafe i indre by. Her stræbes
+              efter at præsentere de bedste sider af kafferne, komplimenteret
+              med lette caferetter og særarrangementer. Baristaerne er uddannet
+              hos os og kan svare på alle spørgsmål om kaffe og anbefalede
+              bryggemetoder. Cafeen er åben, men kan også bookes til private
+              arrangementer til mindre selskaber.
+            </p>
+          </div>
+        </div>
+        <Image src={Historie2} alt="" />
+      </div>
 
-<p>Vores rejse startede i 2007, hvor vi opfandt den mobile kaffebranche i Danmark og banede vejen for den gode, hurtige kop kaffe, serveret lige der hvor den drikkes. 
-  Vi konstruerede selv den første trehjulede kaffebil, der ikke kun bragte kvalitetskaffe, men også satte standarden for innovation inden for kaffe og eventcatering. Gennem kompetente og servicemindede baristaer blev budskabet om den gode kop kaffe hurtigt en del af vores identitet. </p>
-<p>
-  Vores identitet ligger ganske vist i Københavns Nordhavn, men for at nærme os byen har vi åbnet egen cafe i indre by. Her stræbes efter at præsentere de bedste sider af kafferne, komplimenteret med lette caferetter og særarrangementer. Baristaerne er uddannet hos os og kan svare på alle spørgsmål om kaffe og anbefalede bryggemetoder. Cafeen er åben, men kan også bookes til private arrangementer til mindre selskaber.
-
-</p>
-
-</div>
-</div>
-<Image src={Historie2} alt=""></Image>
-</section>
-
-
-   <!--  <Button>Klik!</Button>
+      <!--  <Button>Klik!</Button>
     <p>
       Link til <Link href="https://www.kea.dk" target="_blank"
         >En anden side</Link
       >
     </p>
     <Image src={thumbsup} alt="" /> -->
+    </section>
   </article>
+  <script>
+    import { animate, scroll } from "motion";
+
+    /* sektion 4 parralax */
+    scroll(animate(".parallaxgrafik1_4", { y: [200, -800] }), {
+      target: document.querySelector(".parallaxgrafik1_4"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik2_4", { y: [4000, -100] }), {
+      target: document.querySelector(".parallaxgrafik2_4"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik3_4", { y: [800, -200] }), {
+      target: document.querySelector(".parallaxgrafik3_4"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik4_4", { y: [600, -500] }), {
+      target: document.querySelector(".parallaxgrafik4_4"),
+      offset: ["start end", "end start"],
+    });
+
+    scroll(animate(".parallaxgrafik5_4", { y: [-100, 50] }), {
+      target: document.querySelector(".parallaxgrafik5_4"),
+      offset: ["start end", "end start"],
+    });
+  </script>
 </MainLayout>
