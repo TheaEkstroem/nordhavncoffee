@@ -30,76 +30,77 @@ const {
   <article>
     <section>
       <div class="parallaxgrafik relative h-[600px] md:h-screen w-full">
+        <!-- desktophero billeder -->
         <div
-          class="absolute inset-0 w-full h-full grid grid-cols-10 grid-span-2 grid-rows-6"
+          class="absolute inset-0 w-full h-full grid grid-cols-7 grid-span-2 grid-rows-6"
         >
-          <div class="md:col-start-8 grid grid-rows-10">
-            <img
-              src="/kaffebønner.webp"
-              alt="bønner"
-              class="w-[100px] md:w-[250px] h-auto object-cover md:rotate-[90deg] md:row-start-4 mangeelementer2 z-30 hidden md:block"
-            />
-            <Image
-              class="w-[100px] md:w-130px h-auto md:rotate-[20deg] object-fit pb-s mt-xs z-20 hidden md:block"
-              src={Marcala}
-              alt="Marcala"
-            />
+          <img
+            src="/kaffebønner.webp"
+            alt="bønner"
+            class="md:w-[250px] h-auto object-cover md:rotate-[180deg] md:row-start-[-1] md:col-start-5 z-30 hidden md:block"
+          />
+          <Image
+            class="w-[150px] h-auto md:rotate-[20deg] md:row-start-1 md:col-start-5 object-fit pb-s mt-xs z-10 hidden md:block"
+            src={Marcala}
+            alt="Marcala"
+          />
 
-            <img
-              src="/kaffebønner.webp"
-              alt="bønner"
-              class="w-[100px] md:w-[250px] h-auto object-cover md:rotate-[45deg] mangeelementer2 z-15 hidden md:block"
-            />
+          <img
+            src="/kaffebønner.webp"
+            alt="bønner"
+            class="w-[100px] md:w-[250px] h-auto object-cover md:rotate-[45deg] md:col-start-6 z-15 hidden md:block"
+          />
 
-            <Image
-              class="w-[100px] md:w-200px md:row-start-1 md:rotate-[-10deg] h-auto object-fit pb-s mt-xs col-span-1 z-35 hidden md:block"
-              src={Modernespresso}
-              alt="Modernespresso"
-            />
+          <Image
+            class="w-[100px] md:w-100px md:rotate-[-10deg] md:row-start-3 md:col-start-6 h-auto object-fit pb-s mt-xs col-span-1 z-35 hidden md:block"
+            src={Modernespresso}
+            alt="Modernespresso"
+          />
 
-            <img
-              src="/kaffebønner.webp"
-              alt="bønner"
-              class="w-[100px] md:w-[250px] md:row-start-2 h-auto object-cover md:rotate-[-45deg] mangeelementer2 z-20 hidden md:block"
-            />
+          <img
+            src="/kaffebønner.webp"
+            alt="bønner"
+            class="w-[100px] md:w-[250px] h-auto object-cover md:rotate-[-45deg] md:col-start-5 md:row-start-4 z-20 hidden md:block"
+          />
 
-            <Image
-              class="w-100px md:w-160px md:rotate-[10deg] md:row-start-3 h-auto object-fit pb-s mt-xs col-span-1 z-15 hidden md:block"
-              src={Cajamarca}
-              alt="Cajamarca"
-            />
+          <Image
+            class="w-[150px] md:w-160px md:rotate-[10deg] md:row-start-5 md:col-start-5 h-auto object-fit pb-s mt-xs col-span-1 z-15 hidden md:block"
+            src={Cajamarca}
+            alt="Cajamarca"
+          />
 
-            <img
-              src="/kaffebønner.webp"
-              alt="bønner"
-              class="w-[100px] md:w-[250px] md:row-start-6 h-auto object-cover mangeelementer2 z-20 hidden md:block"
-            />
-          </div>
+          <img
+            src="/kaffebønner.webp"
+            alt="bønner"
+            class="w-[100px] md:w-[250px] h-auto object-cover md:row-start-5 md:col-start-6 z-20 hidden md:block"
+          />
+          <!-- desktophero billeder -->
+          <!-- mobilehero billeder -->
 
           <Image
             src={Kaffebønne1}
             alt="bønne"
-            class="col-start-2 parallaxgrafik1_4 sm:block"
+            class="col-start-6 parallaxgrafik1_4 md:hidden"
           />
           <Image
             src={Kaffebønne2}
             alt="bønne"
-            class="col-start-5 parallaxgrafik2_4 sm:block"
+            class="col-start-5 parallaxgrafik2_4 md:hidden"
           />
           <Image
             src={Kaffebønne2}
             alt="bønne"
-            class="col-start-8 parallaxgrafik3_4 sm:block"
+            class="col-start-8 parallaxgrafik3_4 md:hidden"
           />
           <Image
             src={Kaffebønne1}
             alt="bønne"
-            class="col-start-3 col-span-2 parallaxgrafik4_4 sm:block"
+            class="col-start-3 col-span-2 parallaxgrafik4_4 md:hidden"
           />
           <Image
             src={Kaffebønne2}
             alt="bønne"
-            class="col-start-9 parallaxgrafik5_4 sm:block"
+            class="col-start-9 parallaxgrafik5_4 md:hidden"
           />
         </div>
         <div class="absolute inset-0 grid grid-cols-10 grid-rows-4">
@@ -120,7 +121,7 @@ const {
       </div>
     </section>
     <section
-      class="bg-background-beige flex-col justify-center px-s md:px-2xl py-3xl grid grid-cols-1 md:grid-cols-3 gap-xl md:py-3xl z-20"
+      class="bg-background-beige flex-col justify-center px-s md:px-2xl py-3xl grid grid-cols-1 md:grid-cols-3 gap-xl md:py-3xl z-50"
     >
       <div>
         <div class="relative w-[378px] h-[396px]">
@@ -381,10 +382,8 @@ const {
         <Image src={Historie2} alt="" />
       </div>
     </section>
-    <section
-      class="bg-brand-yellow py-m grid grid-rows-2[1fr_1fr] md:grid-cols-2 gap-xl z-20"
-    >
-      <div class="grid-span-2 md:px-2xl md:py-6xl">
+    <section class="bg-brand-yellow py-xl grid grid-cols-4 grid-rows-1">
+      <div class="md:px-2xl row-start-2 col-span-4 md:col-span-2 z-10">
         <h1>FAQ</h1>
 
         <div class="border-y-2 border-b-rosa-900">
@@ -437,17 +436,11 @@ const {
           </div>
         </div>
       </div>
-      <div>
-        <img
-          src="public/mand.webp"
-          alt="mand"
-          class="col-start-end z-20 hidden md:block"
-        />
-        <img
-          src="public/risteri.webp"
-          alt="risteri"
-          class="row-start-4 hidden md:block"
-        />
+      <div class="col-start-4 row-start-2 z-20 hidden md:block">
+        <img src="public/mand.webp" alt="mand" />
+      </div>
+      <div class="col-start-3 row-start-2 z-10 hidden md:block">
+        <img src="public/risteri.webp" alt="risteri" />
       </div>
     </section>
 
