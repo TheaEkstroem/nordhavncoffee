@@ -105,7 +105,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
             </div>
 
             <!-- Hyppighed -->
-            <div class="flex items-center justify-between  pb-sm">
+            <div class="flex items-center justify-between pb-sm">
               <label class="text-font-white text-lg font-futura block"
                 >Hyppighed</label
               >
@@ -117,7 +117,6 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
               </select>
             </div>
             <Button size="medium" variant="buttonyellow" href="/">KØB</Button>
-
           </div>
         </div>
       </div>
@@ -256,13 +255,12 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
         at skabe mindeværdige øjeblikke forenes
       </h4>
     </div>
-
     <!-- pakkeløsning  -->
     <div
       class="bg-beige-500 flex flex-col justify-center px-s md:px-2xl py-3xl"
     >
-      <h3>HVORDAN VIRKER ABBONEMENTET?</h3>
-      <h4>Svar på hvordan vores abonnement fungere</h4>
+      <h3>VÆLG PAKKELØSNING</h3>
+      <h4>Svært at vælge? Udforsk en af vores pakkeløsninger</h4>
 
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-xl py-sm md:py-3xl md:px-xl"
@@ -276,7 +274,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
                 class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
               >
                 <Image
-                  src={Espressoblendno3}
+                  src={Modernespresso}
                   alt="nordhavncoffee logo"
                   class="w-[130px] h-auto object-fit"
                 />
@@ -284,7 +282,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
 
               <div class="relative bg-white shadow-lg rounded-md z-20">
                 <Image
-                  src={Cajamarca}
+                  src={Marcala}
                   alt="nordhavncoffee logo"
                   class="w-[130px] h-auto object-fit"
                 />
@@ -301,10 +299,14 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
               </div>
             </div>
           </div>
-<div class="w-[380px]">
-          <Button class="w-full" size="large" variant="buttonblue"  href="/">KØB</Button>
-        </div>     
-
+          <div class="w-[380px]">
+            <Button
+              class="w-full"
+              size="large"
+              variant="buttonblue"
+              href="/pakkeløsning">KØB</Button
+            >
+          </div>
         </div>
 
         <!-- spicy -->
@@ -316,7 +318,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
                 class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
               >
                 <Image
-                  src={Espressoblendno3}
+                  src={Velvetespresso}
                   alt="nordhavncoffee logo"
                   class="w-[130px] h-auto object-fit"
                 />
@@ -334,7 +336,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
                 class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
               >
                 <Image
-                  src={Havensfilter}
+                  src={Darkespresso}
                   alt="nordhavncoffee logo"
                   class="w-[130px] h-auto object-fit"
                 />
@@ -342,10 +344,15 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
             </div>
           </div>
 
-
           <div class="w-[380px]">
-            <Button class="w-full" size="large" variant="buttonblue"  href="/">KØB</Button>
-          </div>            </div>
+            <Button
+              class="w-full"
+              size="large"
+              variant="buttonblue"
+              href="/pakkeløsning">KØB</Button
+            >
+          </div>
+        </div>
 
         <!-- BLAND SELV -->
         <div class="flex flex-col items-center justify-center gap-s">
@@ -364,7 +371,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
 
               <div class="relative bg-white shadow-lg rounded-md z-20">
                 <Image
-                  src={Modernespresso}
+                  src={Darkespresso}
                   alt="nordhavncoffee logo"
                   class="w-[130px] h-auto object-fit"
                 />
@@ -374,7 +381,7 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
                 class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
               >
                 <Image
-                  src={Havensfilter}
+                  src={Modernespresso}
                   alt="nordhavncoffee logo"
                   class="w-[130px] h-auto object-fit"
                 />
@@ -383,8 +390,13 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
           </div>
 
           <div class="w-[380px]">
-            <Button class="w-full" size="large" variant="buttonblue"  href="/">KØB</Button>
-          </div>       
+            <Button
+              class="w-full"
+              size="large"
+              variant="buttonblue"
+              href="/pakkeløsning">KØB</Button
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -396,60 +408,74 @@ import Favoritesmallproduct from "../components/favoritesmallproduct.astro";
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-xl py-sm md:py-3xl md:px-xl"
       >
-        <div
-          class="w-[380px] h-[410px] p-s"
-          style="background-image: url('/kaffelilla.webp'); background-position: center;"
-        >
-          <div class="flex justify-center z-20">
-            <div class="relative py-xs">
-              <Image
-                src={Velvetespresso}
-                alt="nordhavncoffee Velvetespresso"
-                class="w-[130px] h-auto object-fit"
-              />
+        <!--  -->
+        <a href="/singleview">
+          <div
+            class="pulse w-[380px] h-[410px] p-s"
+            style="background-image: url('/kaffelilla.webp'); background-position: center;"
+          >
+            <div class="flex justify-center z-20">
+              <div class="relative py-xs">
+                <Image
+                  src={Velvetespresso}
+                  alt="nordhavncoffee Velvetespresso"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
             </div>
+            <h3 class="font-extrabold text-center text-brand-yellow">
+              VELVET ESPRESSO
+            </h3>
           </div>
-          <h3 class="font-extrabold text-center text-brand-yellow">
-            VELVET ESPRESSO
-          </h3>
-        </div>
-
-        <div
-          class="w-[380px] h-[410px] p-s"
-          style="background-image: url('/kaffegul.webp'); background-position: center;"
-        >
-          <div class="flex justify-center z-20">
-            <div class="relative py-xs">
-              <Image
-                src={Havensfilter}
-                alt="nordhavncoffee Havensfilter"
-                class="w-[130px] h-auto object-fit"
-              />
+        </a>
+        <!--  -->
+        <a href="/singleview">
+          <div
+            class="pulse w-[380px] h-[410px] p-s"
+            style="background-image: url('/kaffegul.webp'); background-position: center;"
+          >
+            <div class="flex justify-center z-20">
+              <div class="relative py-xs">
+                <Image
+                  src={Havensfilter}
+                  alt="nordhavncoffee Havensfilter"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
             </div>
+            <h3 class="font-extrabold text-center text-brand-purple">
+              HAVNENS BLEND
+            </h3>
           </div>
-          <h3 class="font-extrabold text-center text-brand-purple">
-            HAVNENS BLEND
-          </h3>
-        </div>
-
-        <div
-          class="w-[380px] h-[410px] p-s"
-          style="background-image: url('/kaffeblaa.webp'); background-position: center;"
-        >
-          <div class="flex justify-center z-20">
-            <div class="relative py-xs">
-              <Image
-                src={Modernespresso}
-                alt="nordhavncoffee MODERN ITALIAN"
-                class="w-[130px] h-auto object-fit"
-              />
+        </a>
+        <!--  -->
+        <a href="/singleview">
+          <div
+            class="pulse w-[380px] h-[410px] p-s"
+            style="background-image: url('/kaffeblaa.webp'); background-position: center;"
+          >
+            <div class="flex justify-center z-20">
+              <div class="relative py-xs">
+                <Image
+                  src={Modernespresso}
+                  alt="nordhavncoffee MODERN ITALIAN"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
             </div>
+            <h3 class="font-extrabold text-center text-font-white">
+              MODERN ITALIAN
+            </h3>
           </div>
-          <h3 class="font-extrabold text-center text-font-white">
-            MODERN ITALIAN
-          </h3>
-        </div>
+        </a>
       </div>
     </div>
   </article>
 </MainLayout>
+<style>
+  /* Animate, for at kunne bruge hover skal  */
+  .pulse:hover {
+    animation: pulse;
+    animation-duration: 1s;
+  }
+</style>
