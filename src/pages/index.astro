@@ -8,6 +8,22 @@ import Historie2 from "../assets/images/historie/historie2.webp";
 import Kaffebønne1 from "../assets/images/kaffebønner/kaffebønne1.webp";
 import Kaffebønne2 from "../assets/images/kaffebønner/kaffebønne2.webp";
 import Kaffebønne3 from "../assets/images/kaffebønner/kaffebønne3.webp";
+import Marcala from "../assets/images/kaffe/marcala.webp";
+import Cajamarca from "../assets/images/kaffe/cajamarca.webp";
+import Modernespresso from "../assets/images/kaffe/modernitalianespresso.webp";
+
+const {
+  navn1 = "MARCALA",
+  bordercolor1 = "border-brand-yellow",
+  bgcolor1 = "bg-brand-blue",
+  bgcolor3 = "bg-brand-yellow",
+  bghovercolor1 = "hover:bg-brand-yellow",
+  bghovercolor3 = "hover:bg-brand-blue",
+  textcolor1 = "text-brand-yellow",
+  textcolor3 = "text-brand-blue",
+  texthovercolor1 = "hover:text-brand-blue",
+  texthovercolor3 = "hover:text-brand-yellow",
+} = Astro.props;
 ---
 
 <MainLayout title="Nordhavn Coffee">
@@ -15,40 +31,81 @@ import Kaffebønne3 from "../assets/images/kaffebønner/kaffebønne3.webp";
     <section>
       <div class="parallaxgrafik relative h-[600px] md:h-screen w-full">
         <div
-          class="absolute inset-0 w-full h-full grid grid-cols-10 grid-rows-4 z-0"
+          class="absolute inset-0 w-full h-full grid grid-cols-10 grid-span-2 grid-rows-6"
         >
+          <div class="md:col-start-8 grid grid-rows-10">
+            <img
+              src="/kaffebønner.webp"
+              alt="bønner"
+              class="w-[100px] md:w-[250px] h-auto object-cover md:rotate-[90deg] md:row-start-4 mangeelementer2 z-30 hidden md:block"
+            />
+            <Image
+              class="w-[100px] md:w-130px h-auto md:rotate-[20deg] object-fit pb-s mt-xs z-20 hidden md:block"
+              src={Marcala}
+              alt="Marcala"
+            />
+
+            <img
+              src="/kaffebønner.webp"
+              alt="bønner"
+              class="w-[100px] md:w-[250px] h-auto object-cover md:rotate-[45deg] mangeelementer2 z-15 hidden md:block"
+            />
+
+            <Image
+              class="w-[100px] md:w-200px md:row-start-1 md:rotate-[-10deg] h-auto object-fit pb-s mt-xs col-span-1 z-35 hidden md:block"
+              src={Modernespresso}
+              alt="Modernespresso"
+            />
+
+            <img
+              src="/kaffebønner.webp"
+              alt="bønner"
+              class="w-[100px] md:w-[250px] md:row-start-2 h-auto object-cover md:rotate-[-45deg] mangeelementer2 z-20 hidden md:block"
+            />
+
+            <Image
+              class="w-100px md:w-160px md:rotate-[10deg] md:row-start-3 h-auto object-fit pb-s mt-xs col-span-1 z-15 hidden md:block"
+              src={Cajamarca}
+              alt="Cajamarca"
+            />
+
+            <img
+              src="/kaffebønner.webp"
+              alt="bønner"
+              class="w-[100px] md:w-[250px] md:row-start-6 h-auto object-cover mangeelementer2 z-20 hidden md:block"
+            />
+          </div>
+
           <Image
             src={Kaffebønne1}
             alt="bønne"
-            class="col-start-2 parallaxgrafik1_4"
+            class="col-start-2 parallaxgrafik1_4 sm:block"
           />
           <Image
             src={Kaffebønne2}
             alt="bønne"
-            class="col-start-5 parallaxgrafik2_4"
+            class="col-start-5 parallaxgrafik2_4 sm:block"
           />
           <Image
             src={Kaffebønne2}
             alt="bønne"
-            class="col-start-8 parallaxgrafik3_4"
+            class="col-start-8 parallaxgrafik3_4 sm:block"
           />
           <Image
-            src={Kaffebønne3}
+            src={Kaffebønne1}
             alt="bønne"
-            class="col-start-3 col-span-2 parallaxgrafik4_4"
+            class="col-start-3 col-span-2 parallaxgrafik4_4 sm:block"
           />
           <Image
             src={Kaffebønne2}
             alt="bønne"
-            class="col-start-9 parallaxgrafik5_4"
+            class="col-start-9 parallaxgrafik5_4 sm:block"
           />
         </div>
-        <div
-          class="absolute inset-0 w-full h-full grid grid-cols-10 grid-rows-4 z-10"
-        >
-          <h1 class="row-start-2">NORDHAVN COFFEE</h1>
+        <div class="absolute inset-0 grid grid-cols-10 grid-rows-4">
+          <h1 class="row-start-2 col-start-2">NORDHAVN COFFEE</h1>
           <div
-            class="row-start-3 md:row-start-4 md:col-start-2 col-span-4 flex justify-center mt-10"
+            class="row-start-3 col-start-2 md:row-start-3 md:col-start-1 col-span-4 flex justify-center mt-10"
           >
             <Link size="medium" variant="textlink" href="/sortiment">
               <button
@@ -99,7 +156,7 @@ import Kaffebønne3 from "../assets/images/kaffebønner/kaffebønne3.webp";
       <div>
         <div class="relative w-[378px] h-[396px]">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns="/public/download(1).webp"
             width="378"
             height="396"
             viewBox="0 0 378 396"
@@ -163,6 +220,126 @@ import Kaffebønne3 from "../assets/images/kaffebønner/kaffebønne3.webp";
       </div>
     </section>
     <!-- historie -->
+
+    <section
+      class={`sticky top-0 min-h-screen w-screen bg-cover bg-center ${bgcolor1} pt-10 grid grid-rows-[auto_1fr_auto_auto_auto_auto_auto] grid-cols-5 md:grid-cols-[0.1fr_1fr_0.8fr_0.8fr_0.1fr_0.1fr]  md:py-10xl mangeelementerinview`}
+      id="kaffe-section-1"
+    >
+      <!-- Indhold her -->
+
+      <div
+        class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
+      >
+        <div class="col-start-1 md:row-start-1 md:col-start-2">
+          <h2 class={`${textcolor1}`}>SINGLE</h2>
+          <h1 class={`text-8xl ${textcolor1}`}>{navn1}</h1>
+        </div>
+
+        <!--billede-->
+        <article
+          class="relative grid justify-center col-start-1 py-m md:col-start-4 md:col-end-4 md:row-span-full md:row-end-4 hover:origin-center"
+        >
+          <!-- Marcala billede -->
+          <div
+            class="md:absolute inset-0 md:flex md:justify-end md:items-center"
+          >
+            <img
+              src="src/assets/images/kaffe/marcala.webp"
+              alt="kaffe"
+              class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer1 z-50"
+            />
+          </div>
+          <!-- Kaffebønner billede -->
+          <div class="md:absolute inset-0 flex justify-center items-center">
+            <img
+              src="/kaffebønner.webp"
+              alt="bønner"
+              class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer2 z-20"
+            />
+          </div>
+
+          <!-- Kaffebønner billede -->
+          <div class="md:absolute inset-0 flex justify-center items-center">
+            <img
+              src="/kaffebønner.webp"
+              alt="bønner"
+              class="w-[100px] md:w-[250px] h-auto object-cover mangeelementer3 z-20"
+            />
+          </div>
+        </article>
+
+        <!-- slut -->
+
+        <!--tekst-->
+        <h3
+          class={`${textcolor1} row-start-3 col-start-1 col-end-4 md:row-start-2 md:text-2xl md:col-start-2 `}
+        >
+          80 - 275 DKK
+        </h3>
+
+        <h2
+          class={`${textcolor1} text-m row-start-4 col-start-1 col-end-6 md:col-start-2 md:row-start-5 self-end md:text-2xl`}
+        >
+          BYG DIT EGET ABONNEMENT
+        </h2>
+        <!-- slut -->
+
+        <!-- SINGLE BUTTON ------>
+        <div
+          class="flex col-start-2 col-end-6 row-start-5 md:justify-start md:col-start-2 md:row-start-6"
+        >
+          <Link
+            size="medium"
+            variant="textlink"
+            size="medium"
+            href="/singleview"
+          >
+            <button
+              class={`col-start col-end-6 px-lg py-xs border-2  ${bgcolor3} ${textcolor3} font-bold text-xl ${bghovercolor3} ${texthovercolor3} transition`}
+            >
+              KØB NU
+              <span class="ml-2">→</span>
+            </button>
+          </Link>
+        </div>
+        <!-- SINGLE BUTTON slut ------>
+      </div>
+
+      <div
+        class="flex items-center row-start-6 col-start-2 md:justify-start md:col-start-5 md:row-start-4"
+      >
+        <a href="#kaffe-section-4">
+          <button
+            class={`w-xl h-xl flex items-center justify-center rounded-full border-2 ${bordercolor1} ${bgcolor1} ${textcolor1} ${bghovercolor1} ${texthovercolor1} transition`}
+          >
+            Sidste
+          </button>
+        </a>
+      </div>
+
+      <div
+        class="items-center row-start-6 col-start-3 md:justify-start md:col-start-5 md:row-start-5"
+      >
+        <h2
+          class={`${textcolor1}  md:justify-start md:col-start-5 md:row-start-5 text-s`}
+        >
+          1/4
+        </h2>
+      </div>
+
+      <div
+        class="flex items-center row-start-6 col-start-4 md:justify-start md:col-start-5 md:row-start-6"
+      >
+        <a href="#kaffe-section-2">
+          <button
+            class={`w-xl h-xl flex items-center justify-center rounded-full border-2 ${bordercolor1} ${bgcolor1} ${textcolor1} ${bghovercolor1} ${texthovercolor1} transition`}
+          >
+            Næste
+          </button>
+        </a>
+      </div>
+    </section>
+
     <section class="px-s md:px-2xl py-3xl">
       <h1>HØR VORES HISTORIE</h1>
       <div class="grid md:grid-cols-2 gap-ml py-xs">
@@ -177,9 +354,9 @@ import Kaffebønne3 from "../assets/images/kaffebønner/kaffebønne3.webp";
         </p>
 
         <Image src={Historie1} alt="" />
-        <div class="py-m">
+        <div class="py-xs">
           <h3>VI ÅBNER VORES CAFÉ</h3>
-          <div class="grid md:grid-cols-2 gap-ml py-xs">
+          <div class="grid md:grid-cols-2 gap-ml">
             <p>
               Vores rejse startede i 2007, hvor vi opfandt den mobile
               kaffebranche i Danmark og banede vejen for den gode, hurtige kop
@@ -203,16 +380,100 @@ import Kaffebønne3 from "../assets/images/kaffebønner/kaffebønne3.webp";
         </div>
         <Image src={Historie2} alt="" />
       </div>
+    </section>
+    <section
+      class="bg-brand-yellow py-m grid grid-rows-2[1fr_1fr] md:grid-cols-2 gap-xl z-20"
+    >
+      <div class="grid-span-2 md:px-2xl md:py-6xl">
+        <h1>FAQ</h1>
 
-      <!--  <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
+        <div class="border-y-2 border-b-rosa-900">
+          <button class="accordion bg-brand-yellow w-full text-left">
+            <h3>AFBESTILLING</h3>
+          </button>
+          <div class="panel">
+            <p>
+              Efter at have fulgt de trin, der er skitseret i den generelle
+              administrationsdel øverst på denne side, gå til punktet
+              ”Administration eller Ændring eller Handling eller Håndtering”,
+              hvor du skal klikke på punktet ”Rediger”. Herfra skal du klikke på
+              punktet nederst ”Annullering”. Dit abonnement er nu annulleret.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-b-2 border-rosa-900">
+          <button class="accordion w-full text-left">
+            <h3>ÅBNINGSTIDER</h3>
+          </button>
+          <div class="panel">
+            <ul>
+              <li>
+                <p>• Mandag til fredag: 07:45 – 17:00</p>
+              </li>
+              <li>
+                <p>• Lørdag: 10:00 – 17:00</p>
+              </li>
+              <li>
+                <p>• Søndag: 10:00 – 17:00</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-b-2 border-b-rosa-900">
+          <button class="accordion w-full text-left">
+            <h3>LEVERING</h3>
+          </button>
+          <div class="panel">
+            <p>
+              Leveringstiden for din ordre er 1-3 hverdage. Nordhavn Coffee ApS
+              afsender varer med følgende: GLS – Erhverv. Fragten bliver
+              beregnet ud fra vægt. Du vil kunne vælge mellem at få pakken sendt
+              “uden omdeling” eller “med omdeling”. Du vil altid modtage et
+              track and trace nr., så du kan følge din pakke fra vores lager og
+              hjem til dig.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img
+          src="public/mand.webp"
+          alt="mand"
+          class="col-start-end z-20 hidden md:block"
+        />
+        <img
+          src="public/risteri.webp"
+          alt="risteri"
+          class="row-start-4 hidden md:block"
+        />
+      </div>
+    </section>
+
+    <!-- Nyhedsbrev Component -->
+    <section class="bg-brand-rosa md:px-2xl py-3xl flex flex-col items-start">
+      <h3
+        class="text-brand-purple text-start text-xl md:text-3xl font-semibold mb-6"
       >
-    </p>
-    <Image src={thumbsup} alt="" /> -->
+        TILMELD DIG VORES NYHEDSBREV <br /> OG FÅ OPDATERINGER OM DE NYESTE RISTNINGER
+      </h3>
+      <form class="w-full flex">
+        <input
+          type="email"
+          placeholder="Din emailadresse..."
+          class="flex-grow p-3 mt-xs border-none focus:outline-none focus:ring-2"
+        />
+        <button
+          type="submit"
+          class="bg-brand-rosa text-beige-50 font-semibold hover:bg-brand-purple transition duration-300"
+        >
+          TILMELD
+        </button>
+      </form>
     </section>
   </article>
+
   <script>
     import { animate, scroll } from "motion";
 
@@ -241,5 +502,28 @@ import Kaffebønne3 from "../assets/images/kaffebønner/kaffebønne3.webp";
       target: document.querySelector(".parallaxgrafik5_4"),
       offset: ["start end", "end start"],
     });
+
+    // Accordion funktion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    // Loop igennem alle accordion-knapper
+    for (i = 0; i < acc.length; i++) {
+      var panel = acc[i].nextElementSibling; // Få tilhørende panel
+      if (panel) {
+        panel.style.display = "none"; // Skjul alle paneler ved sideindlæsning
+      }
+
+      acc[i].addEventListener("click", function () {
+        // Toggle panel-visning
+        var panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
   </script>
 </MainLayout>
