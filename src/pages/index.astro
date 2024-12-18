@@ -9,6 +9,8 @@ import Kaffebønne2 from "../assets/images/kaffebønner/kaffebønne2.webp";
 import Marcala from "../assets/images/kaffe/marcala.webp";
 import Cajamarca from "../assets/images/kaffe/cajamarca.webp";
 import Modernespresso from "../assets/images/kaffe/modernitalianespresso.webp";
+import datavisualisering from "../assets/images/datavisualisering.png";
+import Button from "../components/Button.astro";
 
 const {
   navn1 = "MARCALA",
@@ -23,8 +25,7 @@ const {
   texthovercolor3 = "hover:text-brand-yellow",
 } = Astro.props;
 ---
-
-<MainLayout title="Nordhavn Coffee">
+ <MainLayout title="Nordhavn Coffee">
   <article>
     <!-- Hero section -->
     <section class="parallaxgrafik relative h-[500px] md:h-screen w-full">
@@ -153,15 +154,10 @@ const {
         <div class="absolute inset-0 grid grid-cols-10 grid-rows-5">
           <h1 class="row-start-2 col-start-2">NORDHAVN COFFEE</h1>
           <div
-            class="row-start-3 col-start-2 md:row-start-3 md:col-start-1 col-span-4 flex justify-center mt-10"
+            class="row-start-3 col-start-2 col-span-6  md:row-start-3 md:col-start-2 md:col-span-3  justify-center mt-s"
           >
-            <Link size="medium" variant="textlink" href="/sortiment">
-              <button
-                class="px-xl py-xs border-2 font-futura font-bold text-xl bg-rosa-900 text-beige-50 transition"
-              >
-                Find abonnement
-                <span class="ml-2">→</span>
-              </button>
+
+            <Link size="large" variant="button" href="/sortiment">  Find abonnement →
             </Link>
           </div>
         </div>
@@ -170,8 +166,9 @@ const {
 
     <!-- Tre bokse -->
     <section
-      class="bg-background-beige flex-col justify-center px-s md:px-2xl py-3xl grid grid-cols-1 md:grid-cols-3 gap-xl md:py-3xl z-50"
+      class="bg-background-beige flex flex-col justify-center px-s md:px-xl py-2xl md:grid md:grid-cols-3 gap-xl md:py-3xl z-50"
     >
+      <!-- 1 -->
       <div>
         <div class="relative w-[378px] h-[396px]">
           <!-- SVG container -->
@@ -180,7 +177,7 @@ const {
             width="378"
             height="396"
             viewBox="0 0 378 396"
-            class="absolute inset-0 w-[500px] h-[500px]"
+            class="absolute inset-0 max-w-[400px] max-h-[400px]"
             fill="none"
           >
             <defs>
@@ -200,7 +197,7 @@ const {
           <img
             src="/caffe.webp"
             alt="Image inside SVG container"
-            class="absolute inset-0 w-[500px] h-[500px]"
+            class="absolute inset-0 w-[400px] h-[400px]"
             style="clip-path: url(#svgClipPath1);"
           />
         </div>
@@ -216,41 +213,41 @@ const {
         </div>
       </div>
 
+      <!--  2 -->
       <div>
         <div class="relative w-[378px] h-[396px]">
-          <div class="relative w-full h-full">
-            <!-- SVG container -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="378"
-              height="396"
-              viewBox="0 0 378 396"
-              class="absolute inset-0 w-[378px] h-[396px]"
-              fill="none"
-            >
-              <!-- Clip path definition -->
-              <defs>
-                <clipPath id="svgClipPath2">
-                  <path
-                    d="M0 396H378V0H156.358C136.491 0 120.386 16.105 120.386 35.9716C120.386 75.7047 88.1761 107.915 48.443 107.915H40C17.9086 107.915 0 125.823 0 147.915V396Z"
-                  ></path>
-                </clipPath>
-              </defs>
-            </svg>
+          <!-- SVG container -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="378"
+            height="396"
+            viewBox="0 0 378 396"
+            class="absolute inset-0 max-w-[400px] max-h-[400px]"
+            fill="none"
+          >
+            <!-- Clip path definition -->
+            <defs>
+              <clipPath id="svgClipPath2">
+                <path
+                  d="M0 396H378V0H156.358C136.491 0 120.386 16.105 120.386 35.9716C120.386 75.7047 88.1761 107.915 48.443 107.915H40C17.9086 107.915 0 125.823 0 147.915V396Z"
+                ></path>
+              </clipPath>
+            </defs>
+          </svg>
 
-            <div
-              class="absolute top-xxxs left-xs w-3xl h-3xl bg-brand-yellow rounded-full"
-            >
-            </div>
-            <!-- Image clipped to SVG -->
-            <img
-              src="/See-menu.webp"
-              alt="Clipped image"
-              class="absolute inset-0 w-[378px] h-[396px] object-cover"
-              style="clip-path: url(#svgClipPath2); -webkit-clip-path: url(#svgClipPath2);"
-            />
+          <div
+            class="absolute top-xxxs left-xs w-3xl h-3xl bg-brand-yellow rounded-full"
+          >
           </div>
+          <!-- Image clipped to SVG -->
+          <img
+            src="/See-menu.webp"
+            alt="Clipped image"
+            class="absolute inset-0 w-[378px] h-[396px] object-cover"
+            style="clip-path: url(#svgClipPath2); -webkit-clip-path: url(#svgClipPath2);"
+          />
         </div>
+
         <div>
           <h3>Vores risteri</h3>
           <div class="gap-ml py-xs">
@@ -263,6 +260,8 @@ const {
           </div>
         </div>
       </div>
+     
+      <!-- 3  -->
 
       <div>
         <div class="relative w-[378px] h-[396px]">
@@ -272,12 +271,12 @@ const {
             width="378"
             height="396"
             viewBox="0 0 378 396"
-            class="absolute inset-0 w-[500px] h-[500px]"
+            class="absolute inset-0 max-w-[500px] max-h-[500px]"
             fill="none"
           >
             <defs>
               <!-- Define the clip path based on the SVG path -->
-              <clipPath id="svgClipPath">
+              <clipPath id="svgClipPath3">
                 <path
                   d="M378 396H0V0H221.642C241.509 0 257.614 16.105 257.614 35.9716C257.614 75.7047 289.824 107.915 329.557 107.915H338C360.091 107.915 378 125.823 378 147.915V396Z"
                   fill="none"></path>
@@ -292,8 +291,8 @@ const {
           <img
             src="/kaffekop.webp"
             alt="Image inside SVG container"
-            class="absolute inset-0 w-fill h-[500px]"
-            style="clip-path: url(#svgClipPath);"
+            class="absolute inset-0 w-fill w-[378px] h-[500px] object-cover"
+            style="clip-path: url(#svgClipPath3);"
           />
         </div>
 
@@ -432,297 +431,334 @@ const {
 
     <!-- Vores historie -->
     <section class="px-s md:px-2xl py-3xl">
-      <h1>HØR VORES HISTORIE</h1>
-      <div class="grid md:grid-cols-2 gap-ml py-xs">
-        <p>
-          Vores rejse startede i 2007, hvor vi opfandt den mobile kaffebranche i
-          Danmark og banede vejen for den gode, hurtige kop kaffe, serveret lige
-          der hvor den drikkes.  Vi konstruerede selv den første trehjulede
-          kaffebil, der ikke kun bragte kvalitetskaffe, men også satte
-          standarden for innovation inden for kaffe og eventcatering. Gennem
-          kompetente og servicemindede baristaer blev budskabet om den gode kop
-          kaffe hurtigt en del af vores identitet.
-        </p>
+      <h1 class="pb-sm">OM NORDHAVN COFFEE</h1>
 
-        <Image src={Historie1} alt="" />
-        <div class="py-xs">
-          <h3>VI ÅBNER VORES CAFÉ</h3>
-          <div class="grid md:grid-cols-2 gap-ml">
-            <p>
-              Vores rejse startede i 2007, hvor vi opfandt den mobile
-              kaffebranche i Danmark og banede vejen for den gode, hurtige kop
-              kaffe, serveret lige der hvor den drikkes.  Vi konstruerede selv
-              den første trehjulede kaffebil, der ikke kun bragte
-              kvalitetskaffe, men også satte standarden for innovation inden for
-              kaffe og eventcatering. Gennem kompetente og servicemindede
-              baristaer blev budskabet om den gode kop kaffe hurtigt en del af
-              vores identitet.
-            </p>
-            <p>
-              Vores identitet ligger ganske vist i Københavns Nordhavn, men for
-              at nærme os byen har vi åbnet egen cafe i indre by. Her stræbes
-              efter at præsentere de bedste sider af kafferne, komplimenteret
-              med lette caferetter og særarrangementer. Baristaerne er uddannet
-              hos os og kan svare på alle spørgsmål om kaffe og anbefalede
-              bryggemetoder. Cafeen er åben, men kan også bookes til private
-              arrangementer til mindre selskaber.
-            </p>
-          </div>
-        </div>
-        <Image src={Historie2} alt="" />
-      </div>
-    </section>
-
-    <!-- accordion -->
-    <section class="bg-brand-yellow py-xl grid grid-cols-4 grid-rows-1">
-      <div class="md:px-2xl row-start-2 col-span-4 md:col-span-2 z-10">
-        <h1>FAQ</h1>
-        <div>
-          <details>
-            <summary
-              class="list-none flex flex-wrap border-y-2 border-rosa-900 items-center cursor-pointer"
-            >
-              <div class="md:block hidden"></div>
-              <h3>AFBESTILLING</h3>
-            </summary>
-            <div>
-              <p class="py-xs">
-                Efter at have fulgt de trin, der er skitseret i den generelle
-                administrationsdel øverst på denne side, gå til punktet
-                ”Administration eller Ændringeller Handling eller
-                Håndtering”,hvor du skal klikke på punktet ”Rediger”. Herfra
-                skal du klikke på punktet nederst ”Annullering”. Dit abonnement
-                er nu annulleret.
-              </p>
-            </div>
-          </details>
-        </div>
-        <div>
-          <details>
-            <summary
-              class="list-none flex flex-wrap border-b-2 border-rosa-900 items-center cursor-pointer"
-            >
-              <div class="md:block hidden"></div>
-              <h3>ÅBNINGSTIDER</h3>
-            </summary>
-            <div>
-              <ul>
-                <li>
-                  <p>• Mandag til fredag: 07:45 – 17:00</p>
-                </li>
-                <li>
-                  <p>• Lørdag: 10:00 – 17:00</p>
-                </li>
-                <li>
-                  <p>• Søndag: 10:00 – 17:00</p>
-                </li>
-              </ul>
-            </div>
-          </details>
-        </div>
-        <div>
-          <details>
-            <summary
-              class="list-none flex flex-wrap border-b-2 border-rosa-900 items-center cursor-pointer"
-            >
-              <div class="md:block hidden"></div>
-              <h3>LEVERING</h3>
-            </summary>
-            <div>
-              <p class="py-xs">
-                Leveringstiden for din ordre er 1-3 hverdage. Nordhavn Coffee
-                ApS afsender varer med følgende: GLS – Erhverv. Fragten bliver
-                beregnet ud fra vægt. Du vil kunne vælge mellem at få pakken
-                sendt “uden omdeling” eller “med omdeling”. Du vil altid modtage
-                et track and trace nr., så du kan følge din pakke fra vores
-                lager og hjem til dig.
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-      <div class="col-start-4 row-start-2 z-20 hidden md:block">
-        <img src="public/mand.webp" alt="mand" />
-      </div>
-      <div class="col-start-3 row-start-2 z-10 hidden md:block">
-        <img src="public/risteri.webp" alt="risteri" />
-      </div>
-    </section>
-
-    <!-- Nyhedsbrev Component -->
-    <section class="bg-brand-rosa md:px-2xl py-3xl flex flex-col items-start">
-      <h3
-        class="text-brand-purple text-start text-xl md:text-3xl font-semibold mb-6"
-      >
-        TILMELD DIG VORES NYHEDSBREV <br /> OG FÅ OPDATERINGER OM DE NYESTE RISTNINGER
-      </h3>
-      <form class="w-full flex">
-        <input
-          type="email"
-          placeholder="Din emailadresse..."
-          class="flex-grow p-3 mt-xs border-none focus:outline-none focus:ring-2"
+      <div class="relative w-full max-w-[1350px] h-[375px] overflow-hidden">
+        <Image
+          src={Historie1}
+          class="w-full h-full object-cover"
+          alt="kaffevogn"
         />
-        <button
-          type="submit"
-          class="bg-brand-purple text-rosa-900 font-semibold hover:bg-brand-rosa transition duration-300"
-        >
-          TILMELD
-        </button>
-      </form>
+      </div>
+      <div class="py-xl">
+        <h3 class="pb-sm">VI ÅBNER VORES CAFÉ</h3>
+        <div class="grid md:grid-cols-2 gap-6xl">
+          <p>
+            Vores rejse startede i 2007, hvor vi opfandt den mobile kaffebranche
+            i Danmark og banede vejen for den gode, hurtige kop kaffe, serveret
+            lige der hvor den drikkes.  Vi konstruerede selv den første
+            trehjulede kaffebil, der ikke kun bragte kvalitetskaffe, men også
+            satte standarden for innovation inden for kaffe og eventcatering.
+            Gennem kompetente og servicemindede baristaer blev budskabet om den
+            gode kop kaffe hurtigt en del af vores identitet.
+          </p>
+          <p>
+            Vores identitet ligger ganske vist i Københavns Nordhavn, men for at
+            nærme os byen har vi åbnet egen cafe i indre by. Her stræbes efter
+            at præsentere de bedste sider af kafferne, komplimenteret med lette
+            caferetter og særarrangementer. Baristaerne er uddannet hos os og
+            kan svare på alle spørgsmål om kaffe og anbefalede bryggemetoder.
+            Cafeen er åben, men kan også bookes til private arrangementer til
+            mindre selskaber.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative w-full max-w-[1350px] h-[375px] overflow-hidden">
+        <Image
+          src={Historie2}
+          class="w-full h-full object-cover"
+          alt="kaffevogn"
+        />
+      </div>
     </section>
   </article>
 
-  <script>
-    import { animate, scroll, inView } from "motion";
+  <!-- Datavisualisering -->
+  <section class="bg-rosa-200 h-full">
+    <div class="grid md:grid-cols-2 p-2xl">
+      <Image
+        src={datavisualisering}
+        alt="datavisualisering"
+        class="max-h-[600px] w-auto pb-s"
+      />
 
-    inView(".mangeelementerinview", ({ target }) => {
-      console.log("Element is in view!");
+      <div class="flex flex-col gap-y-ml justify-center">
+        <h2>HVORFOR VÆLGE ET KAFFEABONNEMENT</h2>
+        <div>
+          <p class="">Med et kaffeabonnement får du:</p>
+          <ul class="list-disc list-inside">
+            <li>Variation med nye kaffesmage.</li>
+            <li>Bekvemmelighed og regelmæssig levering.</li>
+            <li>Kaffeglæde hver dag.</li>
+          </ul>
+          <br />
+          <p>
+            Gør kaffehverdagen nemmere og mere spændende – vælg et
+            kaffeabonnement, der passer til din livsstil!
+          </p>
+        </div>
+        <Button size="xlarge" variant="buttonrosa" href="/sortiment"
+          >FIND ABONNEMENT</Button
+        >
+      </div>
+    </div>
+  </section>
 
-      // Start animation
+  <!-- accordion -->
+  <section class="bg-brand-yellow  py-2xl  md:py-7xl grid grid-cols-4 grid-rows-1">
+    <div class="md:px-2xl row-start-2 col-span-4 md:col-span-2 z-10 px-s">
+      <h1>FAQ</h1>
+      <div>
+        <details>
+          <summary
+            class="list-none flex flex-wrap border-y-2 border-rosa-900 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h3>AFBESTILLING</h3>
+          </summary>
+          <div>
+            <p class="py-xs">
+              Efter at have fulgt de trin, der er skitseret i den generelle
+              administrationsdel øverst på denne side, gå til punktet
+              ”Administration eller Ændringeller Handling eller Håndtering”,hvor
+              du skal klikke på punktet ”Rediger”. Herfra skal du klikke på
+              punktet nederst ”Annullering”. Dit abonnement er nu annulleret.
+            </p>
+          </div>
+        </details>
+      </div>
+      <div>
+        <details>
+          <summary
+            class="list-none flex flex-wrap border-b-2 border-rosa-900 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h3>ÅBNINGSTIDER</h3>
+          </summary>
+          <div>
+            <ul>
+              <li>
+                <p>• Mandag til fredag: 07:45 – 17:00</p>
+              </li>
+              <li>
+                <p>• Lørdag: 10:00 – 17:00</p>
+              </li>
+              <li>
+                <p>• Søndag: 10:00 – 17:00</p>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </div>
+      <div>
+        <details>
+          <summary
+            class="list-none flex flex-wrap border-b-2 border-rosa-900 items-center cursor-pointer"
+          >
+            <div class="md:block hidden"></div>
+            <h3>LEVERING</h3>
+          </summary>
+          <div>
+            <p class="py-xs">
+              Leveringstiden for din ordre er 1-3 hverdage. Nordhavn Coffee ApS
+              afsender varer med følgende: GLS – Erhverv. Fragten bliver
+              beregnet ud fra vægt. Du vil kunne vælge mellem at få pakken sendt
+              “uden omdeling” eller “med omdeling”. Du vil altid modtage et
+              track and trace nr., så du kan følge din pakke fra vores lager og
+              hjem til dig.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="col-start-4 row-start-2 z-20 -translate-x-m translate-y-ml  hidden md:block">
+      <img src="public/mand.webp" alt="mand" />
+    </div>
+    <div class="col-start-3 row-start-2 z-10 translate-x-ml hidden md:block">
+      <img src="public/risteri.webp" alt="risteri" />
+    </div>
+  </section>
+
+  <!-- Nyhedsbrev Component -->
+  <section class="bg-brand-rosa px-s md:px-2xl py-3xl flex flex-col items-start">
+   
+    <h3
+      class="text-brand-purple text-start text-xl md:text-3xl font-semibold mb-xxa"
+    >
+      TILMELD DIG VORES NYHEDSBREV <br /> OG FÅ OPDATERINGER OM DE NYESTE RISTNINGER
+    </h3>
+    <form class="w-full flex gap-x-lg">
+      <input
+        type="email"
+        placeholder="Din emailadresse..."
+        class="flex-grow p-xs mt-xs border-none focus:outline-none focus:ring-2"
+      />
+      <Button size="xsmall" variant="buttonpurple" href="/">TILMELD</Button>
+     
+    </form>
+  </section>
+</MainLayout>
+
+<script>
+/* login væg */
+const password = "nordhavn1234"; // Use proper quotes
+  const userPassword = localStorage.getItem("password");
+
+  if (userPassword !== password) {
+    const enteredPassword = prompt("Enter the password to access this site:");
+    if (enteredPassword !== password) {
+      alert("Incorrect password!");
+      window.location.href = "https://isitfridayyet.net/"; // Redirect or block access
+    } else {
+      localStorage.setItem("password", enteredPassword);
+    }
+  }
+
+
+/*  */
+
+  import { animate, scroll, inView } from "motion";
+
+  inView(".mangeelementerinview", ({ target }) => {
+    console.log("Element is in view!");
+
+    // Start animation
+    animate(
+      ".mangeelementer1",
+      { x: [0, 0], y: [0, 0], rotate: [0, 15] }, // Tilføj rotation
+      { duration: 0.8 }
+    );
+    animate(
+      ".mangeelementer2",
+      { x: [0, 200], y: [-100, 0] },
+      { duration: 0.8 }
+    );
+
+    animate(
+      ".mangeelementer3",
+      { x: [0, -150], y: [100, 0] },
+      { duration: 0.8 }
+    );
+
+    // Out-of-view animation
+    return () => {
+      console.log("Element is out of view!");
       animate(
         ".mangeelementer1",
-        { x: [0, 0], y: [0, 0], rotate: [0, 15] }, // Tilføj rotation
-        { duration: 0.8 }
+        { x: [0, 0], y: [0, 0], rotate: [-10, 0] }, // Roter tilbage
+        { duration: 0.4 }
       );
-      animate(
-        ".mangeelementer2",
-        { x: [0, 200], y: [-100, 0] },
-        { duration: 0.8 }
-      );
+      animate(".mangeelementer2", { x: [0, 0], y: [0, 0] }, { duration: 0.4 });
+      animate(".mangeelementer3", { x: [0, 0], y: [0, 0] }, { duration: 0.4 });
+    };
+  });
 
-      animate(
-        ".mangeelementer3",
-        { x: [0, -150], y: [100, 0] },
-        { duration: 0.8 }
-      );
-
-      // Out-of-view animation
-      return () => {
-        console.log("Element is out of view!");
-        animate(
-          ".mangeelementer1",
-          { x: [0, 0], y: [0, 0], rotate: [-10, 0] }, // Roter tilbage
-          { duration: 0.4 }
-        );
-        animate(
-          ".mangeelementer2",
-          { x: [0, 0], y: [0, 0] },
-          { duration: 0.4 }
-        );
-        animate(
-          ".mangeelementer3",
-          { x: [0, 0], y: [0, 0] },
-          { duration: 0.4 }
-        );
-      };
-    });
-
-    // parallax for mobil//
-    document.addEventListener("DOMContentLoaded", () => {
-      scroll(animate(".parallaxgrafik1", { x: [0, 50], y: [100, 0] }), {
-        target: document.querySelector(".parallaxgrafik1"),
-        offset: ["start end", "end start"],
-      });
-
-      scroll(
-        animate(".parallaxgrafik2", {
-          x: [0, 50],
-          y: [600, 0],
-          rotate: [-65, 0],
-        }),
-        {
-          target: document.querySelector(".parallaxgrafik2"),
-          offset: ["start end", "end start"],
-        }
-      );
-
-      scroll(
-        animate(".parallaxgrafik3", {
-          x: [0, 50],
-          y: [800, 0],
-          rotate: [65, 0],
-        }),
-        {
-          target: document.querySelector(".parallaxgrafik3"),
-          offset: ["start end", "end start"],
-        }
-      );
-
-      scroll(
-        animate(".parallaxgrafik4", {
-          x: [0, 50],
-          y: [500, 0],
-          rotate: [-65, 0],
-        }),
-        {
-          target: document.querySelector(".parallaxgrafik4"),
-          offset: ["start end", "end start"],
-        }
-      );
-
-      scroll(animate(".parallaxgrafik5", { x: [0, 50], y: [300, 0] }), {
-        target: document.querySelector(".parallaxgrafik5"),
-        offset: ["start end", "end start"],
-      });
-
-      scroll(
-        animate(".parallaxgrafik6", {
-          x: [0, 50],
-          y: [500, 0],
-          rotate: [-65, 0],
-        }),
-        {
-          target: document.querySelector(".parallaxgrafik2"),
-          offset: ["start end", "end start"],
-        }
-      );
-    });
-
-    // Desk animation //
-    scroll(animate(".parallaxgrafik1_1", { x: [0, 50], y: [100, 0] }), {
-      target: document.querySelector(".parallaxgrafik1_1"),
+  // parallax for mobil//
+  document.addEventListener("DOMContentLoaded", () => {
+    scroll(animate(".parallaxgrafik1", { x: [0, 50], y: [100, 0] }), {
+      target: document.querySelector(".parallaxgrafik1"),
       offset: ["start end", "end start"],
     });
 
     scroll(
-      animate(".parallaxgrafik2_1", {
+      animate(".parallaxgrafik2", {
         x: [0, 50],
         y: [600, 0],
         rotate: [-65, 0],
       }),
       {
-        target: document.querySelector(".parallaxgrafik2_1"),
+        target: document.querySelector(".parallaxgrafik2"),
         offset: ["start end", "end start"],
       }
     );
 
     scroll(
-      animate(".parallaxgrafik3_1", {
+      animate(".parallaxgrafik3", {
         x: [0, 50],
-        y: [800, 0],
+        y: [700, 0],
         rotate: [65, 0],
       }),
       {
-        target: document.querySelector(".parallaxgrafik3_1"),
+        target: document.querySelector(".parallaxgrafik3"),
         offset: ["start end", "end start"],
       }
     );
 
     scroll(
-      animate(".parallaxgrafik4_1", {
+      animate(".parallaxgrafik4", {
         x: [0, 50],
-        y: [900, 0],
+        y: [500, 0],
         rotate: [-65, 0],
       }),
       {
-        target: document.querySelector(".parallaxgrafik4_1"),
+        target: document.querySelector(".parallaxgrafik4"),
         offset: ["start end", "end start"],
       }
     );
 
-    scroll(animate(".parallaxgrafik5_1", { x: [0, 50], y: [300, 0] }), {
-      target: document.querySelector(".parallaxgrafik5_1"),
+    scroll(animate(".parallaxgrafik5", { x: [0, 50], y: [300, 0] }), {
+      target: document.querySelector(".parallaxgrafik5"),
       offset: ["start end", "end start"],
     });
-  </script>
-</MainLayout>
+
+    scroll(
+      animate(".parallaxgrafik6", {
+        x: [0, 50],
+        y: [500, 0],
+        rotate: [-65, 0],
+      }),
+      {
+        target: document.querySelector(".parallaxgrafik2"),
+        offset: ["start end", "end start"],
+      }
+    );
+  });
+
+  // Desk animation //
+  scroll(animate(".parallaxgrafik1_1", { x: [0, 50], y: [100, 0] }), {
+    target: document.querySelector(".parallaxgrafik1_1"),
+    offset: ["start end", "end start"],
+  });
+
+  scroll(
+    animate(".parallaxgrafik2_1", {
+      x: [0, 50],
+      y: [600, 0],
+      rotate: [-65, 0],
+    }),
+    {
+      target: document.querySelector(".parallaxgrafik2_1"),
+      offset: ["start end", "end start"],
+    }
+  );
+
+  scroll(
+    animate(".parallaxgrafik3_1", {
+      x: [0, 50],
+      y: [800, 0],
+      rotate: [65, 0],
+    }),
+    {
+      target: document.querySelector(".parallaxgrafik3_1"),
+      offset: ["start end", "end start"],
+    }
+  );
+
+  scroll(
+    animate(".parallaxgrafik4_1", {
+      x: [0, 50],
+      y: [900, 0],
+      rotate: [-65, 0],
+    }),
+    {
+      target: document.querySelector(".parallaxgrafik4_1"),
+      offset: ["start end", "end start"],
+    }
+  );
+
+  scroll(animate(".parallaxgrafik5_1", { x: [0, 50], y: [300, 0] }), {
+    target: document.querySelector(".parallaxgrafik5_1"),
+    offset: ["start end", "end start"],
+  });
+</script>
