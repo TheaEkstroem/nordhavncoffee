@@ -11,7 +11,7 @@ import Cajamarca from "../assets/images/kaffe/cajamarca.webp";
 import Darkespresso from "../assets/images/kaffe/darkespresso.webp";
 
 const {
-  navn1 = "VORES FARVORITTER",
+  navn1 = "VORES FAVORITTER",
   navn2 = "SPICY MIX",
   navn3 = "NYHEDS PAKKEN",
   navn4 = "BLAND SELV",
@@ -43,16 +43,16 @@ const {
 } = Astro.props;
 ---
 
-<MainLayout>
+<MainLayout title="Pakkeløsning">
   <div>
     <div class="px-s md:px-xl pt-3xl pb-xl">
-      <h1 class="font-medium">VORES SORTIMENT</h1>
-      <h3 class="pb-m">Multipack Abonnement</h3>
+      <h1 class="font-medium">VORES PRODUKTUDVALG</h1>
+      <h3 class="pb-m">Pakkeløsning Abonnement</h3>
 
       <ul class="flex space-x-4 gap-xs mb-s">
         <li>
           <Link size="large" variant="textlink" size="medium" href="/sortiment"
-            >Single poser</Link
+            >Enkelte poser</Link
           >
         </li>
         <li class="">
@@ -78,7 +78,7 @@ const {
         class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
       >
         <div class="col-start-1 md:row-start-1 md:col-start-2">
-          <h3 class={`${textcolor1}`}>MULTIPACK</h3>
+          <h3 class={`${textcolor1}`}>PAKKE</h3>
           <h1 class={`${textcolor1}`}>{navn1}</h1>
         </div>
 
@@ -211,7 +211,7 @@ const {
         class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
       >
         <div class="col-start-1 md:row-start-1 md:col-start-2">
-          <h3 class={`${textcolor2}`}>MULTIPACK</h3>
+          <h3 class={`${textcolor2}`}>PAKKE</h3>
           <h1 class={`${textcolor2}`}>{navn2}</h1>
         </div>
 
@@ -344,7 +344,7 @@ const {
         class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
       >
         <div class="col-start-1 md:row-start-1 md:col-start-2">
-          <h3 class={`${textcolor3}`}>MULTIPACK</h3>
+          <h3 class={`${textcolor3}`}>PAKKE</h3>
           <h1 class={`${textcolor3}`}>{navn3}</h1>
         </div>
 
@@ -475,7 +475,7 @@ const {
         class="col-span-full row-span-full grid-rows-subgrid grid-cols-subgrid grid"
       >
         <div class="col-start-1 md:row-start-1 md:col-start-2">
-          <h3 class={`${textcolor4}`}>MULTIPACK</h3>
+          <h3 class={`${textcolor4}`}>PAKKE</h3>
           <h1 class={`${textcolor4}`}>{navn4}</h1>
         </div>
 
