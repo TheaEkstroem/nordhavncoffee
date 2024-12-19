@@ -146,7 +146,7 @@ const {
             <Image
               src={Kaffebønne2}
               alt="Kaffebønne"
-              class="col-start-9 parallaxgrafik2_1 md:hidden"
+              class="col-start-8 parallaxgrafik2_1 md:hidden"
               loading="lazy"
             />
           </div>
@@ -166,7 +166,7 @@ const {
 
     <!-- Tre bokse -->
     <section
-      class="bg-background-beige flex flex-col justify-center px-s md:px-xl py-2xl md:grid md:grid-cols-3 gap-xl md:py-3xl z-50"
+      class="bg-background-beige flex flex-col justify-center md:px-xl py-2xl md:grid md:grid-cols-3 gap-xl md:py-3xl z-50"
     >
       <!-- 1 -->
       <div>
@@ -197,12 +197,12 @@ const {
           <img
             src="/caffee.webp"
             alt="Image inside SVG container"
-            class="absolute inset-0 max-w-[400px] max-h-[400px] object-cover"
+            class="absolute inset-0 w-[400px] h-[400px] object-cover"
             style="clip-path: url(#svgClipPath1);"
           />
         </div>
 
-        <div>
+        <div class="">
           <h3>Besøg vores café</h3>
           <div class="gap-ml py-xs">
             <p>
@@ -243,7 +243,7 @@ const {
           <img
             src="/See-menu.webp"
             alt="Clipped image"
-            class="absolute inset-0 max-w-[400px] max-h-[400px] object-cover"
+            class="absolute inset-0 w-[400px] h-[400px] object-cover"
             style="clip-path: url(#svgClipPath2); -webkit-clip-path: url(#svgClipPath2);"
           />
         </div>
@@ -271,7 +271,7 @@ const {
             width="378"
             height="396"
             viewBox="0 0 378 396"
-            class="absolute inset-0 max-w-[500px] max-h-[500px]"
+            class="absolute inset-0 max-w-[400px] max-h-[400px]"
             fill="none"
           >
             <defs>
@@ -291,7 +291,7 @@ const {
           <img
             src="/kaffehylde.webp"
             alt="Image inside SVG container"
-            class="absolute inset-0 w-fill w-[378px] h-[500px] object-cover"
+            class="absolute inset-0 w-fill w-[378px] h-[400px] object-cover"
             style="clip-path: url(#svgClipPath3);"
           />
         </div>
@@ -476,7 +476,7 @@ const {
 
   <!-- Datavisualisering -->
   <section class="bg-rosa-200 h-full">
-    <div class="grid md:grid-cols-2 p-2xl">
+    <div class="grid md:grid-cols-2 md:p-2xl p-s">
       <Image
         src={datavisualisering}
         alt="datavisualisering"
@@ -588,7 +588,7 @@ const {
     >
       TILMELD DIG VORES NYHEDSBREV <br /> OG FÅ OPDATERINGER OM DE NYESTE RISTNINGER
     </h3>
-    <form class="w-full flex gap-x-lg">
+    <form class="w-full flex flex-col md:flex-row md:gap-lg gap-s">
       <input
         type="email"
         placeholder="Din emailadresse..."
