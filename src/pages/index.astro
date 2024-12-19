@@ -474,12 +474,12 @@ const {
     </section>
   </article>
 
-  <!-- Datavisualisering -->
+  <!-- infografik -->
   <section class="bg-brand-rosa h-full">
     <div class="grid md:grid-cols-2 md:p-2xl p-s">
       <Image
         src={datavisualisering}
-        alt="datavisualisering"
+        alt="infografik"
         class="max-h-[600px] w-auto pb-s"
       />
 
@@ -601,23 +601,6 @@ const {
 </MainLayout>
 
 <script>
-/* login væg */
-const password = "nordhavn1234"; // Use proper quotes
-  const userPassword = localStorage.getItem("password");
-
-  if (userPassword !== password) {
-    const enteredPassword = prompt("Enter the password to access this site:");
-    if (enteredPassword !== password) {
-      alert("Incorrect password!");
-      window.location.href = "https://isitfridayyet.net/"; // Redirect or block access
-    } else {
-      localStorage.setItem("password", enteredPassword);
-    }
-  }
-
-
-/*  */
-
   import { animate, scroll, inView } from "motion";
 
   inView(".mangeelementerinview", ({ target }) => {
