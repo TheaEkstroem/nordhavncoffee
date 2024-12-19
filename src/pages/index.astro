@@ -25,7 +25,8 @@ const {
   texthovercolor3 = "hover:text-brand-yellow",
 } = Astro.props;
 ---
- <MainLayout title="Nordhavn Coffee">
+
+<MainLayout title="Nordhavn Coffee">
   <article>
     <!-- Hero section -->
     <section class="parallaxgrafik relative h-[500px] md:h-screen w-full">
@@ -154,10 +155,10 @@ const {
         <div class="absolute inset-0 grid grid-cols-10 grid-rows-5">
           <h1 class="row-start-2 col-start-2">NORDHAVN COFFEE</h1>
           <div
-            class="row-start-3 col-start-2 col-span-6  md:row-start-3 md:col-start-2 md:col-span-3  justify-center mt-s"
+            class="row-start-3 col-start-2 col-span-6 md:row-start-3 md:col-start-2 md:col-span-3 justify-center mt-s"
           >
-
-            <Link size="large" variant="button" href="/sortiment">  Find abonnement →
+            <Link size="large" variant="button" href="/sortiment">
+              Find abonnement →
             </Link>
           </div>
         </div>
@@ -181,7 +182,7 @@ const {
             fill="none"
           >
             <defs>
-              <!-- Define the clip path based on the SVG path -->
+              <!-- clip path i SVG path -->
               <clipPath id="svgClipPath1">
                 <path
                   d="M378 396H0V0H221.642C241.509 0 257.614 16.105 257.614 35.9716C257.614 75.7047 289.824 107.915 329.557 107.915H338C360.091 107.915 378 125.823 378 147.915V396Z"
@@ -193,7 +194,7 @@ const {
             class="absolute top-xxxs right-xs w-3xl h-3xl bg-brand-yellow rounded-full"
           >
           </div>
-          <!-- Image inside the SVG -->
+          <!-- billedet i  SVG -->
           <img
             src="/caffee.webp"
             alt="Image inside SVG container"
@@ -225,8 +226,8 @@ const {
             class="absolute inset-0 max-w-[400px] max-h-[400px]"
             fill="none"
           >
-            <!-- Clip path definition -->
-            <defs>
+              <!-- clip path i SVG path -->
+              <defs>
               <clipPath id="svgClipPath2">
                 <path
                   d="M0 396H378V0H156.358C136.491 0 120.386 16.105 120.386 35.9716C120.386 75.7047 88.1761 107.915 48.443 107.915H40C17.9086 107.915 0 125.823 0 147.915V396Z"
@@ -239,7 +240,7 @@ const {
             class="absolute top-xxxs left-xs w-3xl h-3xl bg-brand-yellow rounded-full"
           >
           </div>
-          <!-- Image clipped to SVG -->
+          <!-- billedet i  SVG -->
           <img
             src="/See-menu.webp"
             alt="Clipped image"
@@ -260,7 +261,7 @@ const {
           </div>
         </div>
       </div>
-     
+
       <!-- 3  -->
 
       <div>
@@ -275,7 +276,7 @@ const {
             fill="none"
           >
             <defs>
-              <!-- Define the clip path based on the SVG path -->
+              <!-- clip path i SVG path -->
               <clipPath id="svgClipPath3">
                 <path
                   d="M378 396H0V0H221.642C241.509 0 257.614 16.105 257.614 35.9716C257.614 75.7047 289.824 107.915 329.557 107.915H338C360.091 107.915 378 125.823 378 147.915V396Z"
@@ -287,7 +288,7 @@ const {
             class="absolute top-xxxs right-xs w-3xl h-3xl bg-brand-yellow rounded-full"
           >
           </div>
-          <!-- Image inside the SVG -->
+          <!-- billedet i  SVG -->
           <img
             src="/kaffehylde.webp"
             alt="Image inside SVG container"
@@ -488,7 +489,7 @@ const {
         <div>
           <p class="text-font-white">Med et kaffeabonnement får du:</p>
           <ul class="list-disc list-inside text-font-white">
-            <li >Variation med nye kaffesmage.</li>
+            <li>Variation med nye kaffesmage.</li>
             <li>Bekvemmelighed og regelmæssig levering.</li>
             <li>Kaffeglæde hver dag.</li>
           </ul>
@@ -506,7 +507,9 @@ const {
   </section>
 
   <!-- accordion -->
-  <section class="bg-brand-yellow  py-2xl  md:py-7xl grid grid-cols-4 grid-rows-1">
+  <section
+    class="bg-brand-yellow py-2xl md:py-7xl grid grid-cols-4 grid-rows-1"
+  >
     <div class="md:px-2xl row-start-2 col-span-4 md:col-span-2 z-10 px-s">
       <h1>FAQ</h1>
       <div>
@@ -572,7 +575,9 @@ const {
         </details>
       </div>
     </div>
-    <div class="col-start-4 row-start-2 z-20 -translate-x-m translate-y-ml  hidden md:block">
+    <div
+      class="col-start-4 row-start-2 z-20 -translate-x-m translate-y-ml hidden md:block"
+    >
       <img src="/mand.webp" alt="mand" />
     </div>
     <div class="col-start-3 row-start-2 z-10 translate-x-ml hidden md:block">
@@ -581,8 +586,9 @@ const {
   </section>
 
   <!-- Nyhedsbrev Component -->
-  <section class="bg-brand-rosa px-s md:px-2xl py-3xl flex flex-col items-start">
-   
+  <section
+    class="bg-brand-rosa px-s md:px-2xl py-3xl flex flex-col items-start"
+  >
     <h3
       class="text-brand-purple text-start text-xl md:text-3xl font-semibold mb-xxa"
     >
@@ -595,7 +601,6 @@ const {
         class="flex-grow p-xs mt-xs border-none focus:outline-none focus:ring-2"
       />
       <Button size="xsmall" variant="buttonpurple" href="/">TILMELD</Button>
-     
     </form>
   </section>
 </MainLayout>
