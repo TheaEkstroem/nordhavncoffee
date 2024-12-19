@@ -48,80 +48,83 @@ import Smallproduct from "../components/smallproduct.astro";
           </p>
 
           <h4 class="text-font-white py-xs">Byg dit abonnement</h4>
+          <form action="">
+            <!-- cards med de andre produkter man kan vælge i sit abonnement -->
+            <div class="flex gap-xs md:gap-ml">
+              <Smallproduct
+                bgcolor="bg-background-rosa"
+                imagealt="Billede af cajamarca kaffepose"
+                image="/cajamarca.webp"
+              />
 
-          <!-- cards med de andre produkter man kan vælge i sit abonnement -->
-          <div class="flex gap-xs md:gap-ml">
-            <Smallproduct
-              bgcolor="bg-background-rosa"
-              imagealt="Billede af cajamarca kaffepose"
-              image="/cajamarca.webp"
-            />
-
-            <Smallproduct
-              bgcolor="bg-background-rosa"
-              imagealt="Billede af espresso-blend kaffepose"
-              image="/espresso-blend3.webp"
-            />
-            <Smallproduct
-              bgcolor="bg-background-rosa"
-              imagealt="Billede af havnensfilter kaffepose"
-              image="/havnensfilter.webp"
-            />
-            <Smallproduct
-              bgcolor="bg-background-rosa"
-              imagealt="Billede af modern italian espresso kaffepose"
-              image="/modernitalianespresso.webp"
-            />
-          </div>
-
-          <!-- form, til at vælge hvordan ens abonnement skal være -->
-          <div class="space-y-xs">
-            <!-- Grindstyle -->
-            <div class="flex items-center justify-between">
-              <label class="text-font-white text-lg font-futura block"
-                >Grindstyle</label
-              >
-              <select
-                class="mt-1 block bg-brand-purple text-brand-rosa border border-brand-purple px-4 py-2 w-4/5"
-              >
-                <option>Vælg mulighed</option>
-                <option>Espresso</option>
-                <option>Filter</option>
-                <option>Moka Pot</option>
-                <option>Stempel</option>
-                <option>Whole Beans</option>
-              </select>
+              <Smallproduct
+                bgcolor="bg-background-rosa"
+                imagealt="Billede af espresso-blend kaffepose"
+                image="/espresso-blend3.webp"
+              />
+              <Smallproduct
+                bgcolor="bg-background-rosa"
+                imagealt="Billede af havnensfilter kaffepose"
+                image="/havnensfilter.webp"
+              />
+              <Smallproduct
+                bgcolor="bg-background-rosa"
+                imagealt="Billede af modern italian espresso kaffepose"
+                image="/modernitalianespresso.webp"
+              />
             </div>
 
-            <!-- Størrelse -->
-            <div class="flex items-center justify-between">
-              <label class="text-font-white text-lg font-futura block"
-                >Størrelse</label
-              >
-              <select
-                class="mt-1 block bg-brand-purple text-brand-rosa border border-brand-purple px-4 py-2 w-4/5"
-              >
-                <option>500 g</option>
-                <option>1000 g</option>
-              </select>
-            </div>
+            <!-- form, til at vælge hvordan ens abonnement skal være -->
+            <div class="space-y-xs">
+              <!-- Grindstyle -->
+              <div class="flex items-center justify-between">
+                <label class="text-font-white text-lg font-futura block"
+                  >Grindstyle</label
+                >
+                <select
+                  class="mt-1 block bg-brand-purple text-brand-rosa border border-brand-purple px-4 py-2 w-4/5"
+                >
+                  <option>Vælg mulighed</option>
+                  <option>Espresso</option>
+                  <option>Filter</option>
+                  <option>Moka Pot</option>
+                  <option>Stempel</option>
+                  <option>Whole Beans</option>
+                </select>
+              </div>
 
-            <!-- Hyppighed -->
-            <div class="flex items-center justify-between pb-sm">
-              <label class="text-font-white text-lg font-futura block"
-                >Hyppighed</label
-              >
-              <select
-                class="mt-1 block bg-brand-purple text-brand-rosa border border-brand-purple px-4 py-2 w-4/5"
-              >
-                <option>Hver 14 dag</option>
-                <option>Hver måned</option>
-              </select>
+              <!-- Størrelse -->
+              <div class="flex items-center justify-between">
+                <label class="text-font-white text-lg font-futura block"
+                  >Størrelse</label
+                >
+                <select
+                  class="mt-1 block bg-brand-purple text-brand-rosa border border-brand-purple px-4 py-2 w-4/5"
+                >
+                  <option>500 g</option>
+                  <option>1000 g</option>
+                </select>
+              </div>
+
+              <!-- Hyppighed -->
+              <div class="flex items-center justify-between pb-sm">
+                <label class="text-font-white text-lg font-futura block"
+                  >Hyppighed</label
+                >
+                <select
+                  class="mt-1 block bg-brand-purple text-brand-rosa border border-brand-purple px-4 py-2 w-4/5"
+                >
+                  <option>Hver 14 dag</option>
+                  <option>Hver måned</option>
+                </select>
+              </div>
+              <div>
+                <Button size="medium" variant="buttonpurple" href="/"
+                  >KØB</Button
+                >
+              </div>
             </div>
-            <div>
-              <Button size="medium" variant="buttonpurple" href="/">KØB</Button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>
@@ -278,36 +281,38 @@ import Smallproduct from "../components/smallproduct.astro";
               <div
                 class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
               >
-              <Image
-              src={Modernespresso}
-              alt="nordhavncoffee logo"
-              class="w-[130px] h-auto object-fit"
-            />
-          </div>
+                <Image
+                  src={Modernespresso}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
 
-          <div class="relative bg-white shadow-lg rounded-md z-20">
-            <Image
-              src={Marcala}
-              alt="nordhavncoffee logo"
-              class="w-[130px] h-auto object-fit"
-            />
-          </div>
+              <div class="relative bg-white shadow-lg rounded-md z-20">
+                <Image
+                  src={Marcala}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
 
-          <div
-            class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
-          >
-            <Image
-              src={Havensfilter}
-              alt="nordhavncoffee logo"
-              class="w-[130px] h-auto object-fit"
-            />
+              <div
+                class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
+              >
+                <Image
+                  src={Havensfilter}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
               </div>
             </div>
           </div>
 
           <div class="w-[380px]">
-            <Button class="w-full" size="large" variant="buttonrosa" href="/">KØB</Button>
-            </div>
+            <Button class="w-full" size="large" variant="buttonrosa" href="/"
+              >KØB</Button
+            >
+          </div>
         </div>
 
         <!-- spicy -->
@@ -318,29 +323,29 @@ import Smallproduct from "../components/smallproduct.astro";
               <div
                 class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
               >
-              <Image
-              src={Velvetespresso}
-              alt="nordhavncoffee logo"
-              class="w-[130px] h-auto object-fit"
-            />
-          </div>
+                <Image
+                  src={Velvetespresso}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
 
-          <div class="relative bg-white shadow-lg rounded-md z-20">
-            <Image
-              src={Cajamarca}
-              alt="nordhavncoffee logo"
-              class="w-[130px] h-auto object-fit"
-            />
-          </div>
+              <div class="relative bg-white shadow-lg rounded-md z-20">
+                <Image
+                  src={Cajamarca}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
 
-          <div
-            class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
-          >
-            <Image
-              src={Darkespresso}
-              alt="nordhavncoffee logo"
-              class="w-[130px] h-auto object-fit"
-            />
+              <div
+                class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
+              >
+                <Image
+                  src={Darkespresso}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
               </div>
             </div>
           </div>
@@ -360,29 +365,29 @@ import Smallproduct from "../components/smallproduct.astro";
               <div
                 class="relative bg-white shadow-lg rounded-md -rotate-12 -mr-sm z-10"
               >
-              <Image
-              src={Espressoblendno3}
-              alt="nordhavncoffee logo"
-              class="w-[130px] h-auto object-fit"
-            />
-          </div>
+                <Image
+                  src={Espressoblendno3}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
 
-          <div class="relative bg-white shadow-lg rounded-md z-20">
-            <Image
-              src={Darkespresso}
-              alt="nordhavncoffee logo"
-              class="w-[130px] h-auto object-fit"
-            />
-          </div>
+              <div class="relative bg-white shadow-lg rounded-md z-20">
+                <Image
+                  src={Darkespresso}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
+              </div>
 
-          <div
-            class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
-          >
-            <Image
-              src={Modernespresso}
-              alt="nordhavncoffee logo"
-              class="w-[130px] h-auto object-fit"
-            />
+              <div
+                class="relative bg-white shadow-lg rounded-md rotate-12 -ml-sm z-10"
+              >
+                <Image
+                  src={Modernespresso}
+                  alt="nordhavncoffee logo"
+                  class="w-[130px] h-auto object-fit"
+                />
               </div>
             </div>
           </div>
@@ -468,10 +473,9 @@ import Smallproduct from "../components/smallproduct.astro";
   </article>
 </MainLayout>
 <style>
-	/* Animate, for at kunne bruge hover skal  */
-	.pulse:hover {
-		animation: pulse;
-		animation-duration: 1s;
-	  }
-  
-	</style>
+  /* Animate, for at kunne bruge hover skal  */
+  .pulse:hover {
+    animation: pulse;
+    animation-duration: 1s;
+  }
+</style>
